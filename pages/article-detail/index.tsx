@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import PageFooter from "./../components/PageFooter";
+import PageFooter from "./../../components/PageFooter";
 
 const Home: NextPage = () => {
   return (
