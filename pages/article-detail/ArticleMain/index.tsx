@@ -1,12 +1,12 @@
 import React, { useEffect, useCallback, useState } from "react";
-import PageMainAside from "./../PageMainAside";
-import RecentPostList from "./../RecentPostList";
+import ArticleContent from "./../ArticleContent";
+import PageMainAside from "./../../../components/PageMainAside";
 
 const Index = () => {
   return (
-    <div className="w_page_main">
+    <div className="w_article_main">
       <div className="page_main_inner">
-        <RecentPostList />
+        <ArticleContent />
         <PageMainAside />
       </div>
     </div>

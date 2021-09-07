@@ -21,12 +21,15 @@ a {
 
 .w_article_aside {
   flex: 0 0 280px;
-}
-
+} 
 @import "./../components/PageHeader/index.scss";
+@import "./../pages/article-detail/ArticleHeader/index.scss";
+@import "./../pages/article-detail//ArticleContent/index.scss";
 @import "./../components/PageMain/index.scss";
 @import "./../components/PageNav/index.scss";
 @import "./../components/CardWidgeWebInfo/index.scss";
 @import "./../components/CardWidgeAnnouncement/index.scss";
 @import "./../components/RecentPostItem/index.scss";
 @import "./../components/PageFooter/index.scss";
+@import "./../pages/article-detail/ArticleContent/index.scss"; 
+@import "./../pages/article-detail/ArticleMain/index.scss";

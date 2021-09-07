@@ -1,0 +1,14 @@
+.w_article_content {
+  width: 880px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
+  }
+  .w_article_content_inner {
+     .wac_content{
+        
+     }
+  }
+}
