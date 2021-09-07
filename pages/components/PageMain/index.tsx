@@ -1,8 +1,6 @@
 import React, { useEffect, useCallback, useState } from "react";
-import CardWidgeWebInfo from "./../CardWidgeWebInfo";
-import CardWidgeAnnouncement from "./../CardWidgeAnnouncement";
-import RecentPostItem from "./../RecentPostItem";
-
+import PageMainAside from "./../PageMainAside";
+import RecentPostList from "./../RecentPostList";
 class Index extends React.Component {
   state = {};
 
@@ -12,16 +10,8 @@ class Index extends React.Component {
     return (
       <div className="w_page_main">
         <div className="page_main_inner">
-          <div className="recent_posts">
-            <RecentPostItem />
-            <RecentPostItem />
-            <RecentPostItem />
-            <RecentPostItem />
-          </div>
-          <div className="aside_content">
-            <CardWidgeWebInfo />
-            <CardWidgeAnnouncement />
-          </div>
+          <RecentPostList />
+          <PageMainAside />
         </div>
       </div>
     );
