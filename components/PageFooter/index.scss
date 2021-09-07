@@ -1,11 +1,23 @@
 .w_page_footer {
-  background-color: #eee;
+  position: relative;
   height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .wpf_copyright{
+  color: #fff;
+  .w_page_footer_bg {
+    width: 100vw;
+    height: 140px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .wpf_copyright {
     font-size: 14px;
   }
 }

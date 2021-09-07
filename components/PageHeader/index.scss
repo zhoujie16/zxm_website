@@ -1,11 +1,23 @@
 .w_page_header {
-  background-color: #eee;
+  // background-color: #eese;
+  color: #fff;
   &.full_page {
     position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .w_page_header_bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    z-index: -1;
   }
   .blog_name_center {
     font-size: 40px;
