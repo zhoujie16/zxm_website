@@ -1,0 +1,13 @@
+.w_page_header {
+  background-color: #eee;
+  &.full_page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog_name_center {
+    font-size: 40px;
+  }
+}

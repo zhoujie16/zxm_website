@@ -1,0 +1,24 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import "./../pages/components/PageHeader/index.scss";
+@import "./../pages/components/PageMain/index.scss";
+@import "./../pages/components/PageNav/index.scss";
+@import "./../pages/components/CardWidgeWebInfo/index.scss";
+@import "./../pages/components/CardWidgeAnnouncement/index.scss";
+@import "./../pages/components/RecentPostItem/index.scss";
+@import "./../pages/components/PageFooter/index.scss";

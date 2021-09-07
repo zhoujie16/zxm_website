@@ -1,5 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
-import styles from "./index.module.css";
+import CardWidgeWebInfo from "./../CardWidgeWebInfo";
+import CardWidgeAnnouncement from "./../CardWidgeAnnouncement";
+import RecentPostItem from "./../RecentPostItem";
 
 class Index extends React.Component {
   state = {};
@@ -8,10 +10,18 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className={styles.page_main}>
-        <div className={styles.page_main_inner}>
-          <div className={styles.recent_posts}></div>
-          <div className={styles.aside_content}></div>
+      <div className="w_page_main">
+        <div className="page_main_inner">
+          <div className="recent_posts">
+            <RecentPostItem />
+            <RecentPostItem />
+            <RecentPostItem />
+            <RecentPostItem />
+          </div>
+          <div className="aside_content">
+            <CardWidgeWebInfo />
+            <CardWidgeAnnouncement />
+          </div>
         </div>
       </div>
     );

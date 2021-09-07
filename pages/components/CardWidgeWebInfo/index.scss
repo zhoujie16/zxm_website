@@ -1,0 +1,53 @@
+.w_card_widge {
+  width: 280px;
+  padding: 20px 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
+  }
+}
+.w_card_widge_web_info {
+  .wcw_blog_info {
+    margin-bottom: 14px;
+    .wcw_blog_img {
+      width: 110px;
+      height: 110px;
+      background-color: #eee;
+      margin: 0 auto;
+    }
+    .wcw_blog_name {
+      height: 43px;
+      line-height: 43px;
+      font-size: 22px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .wcw_blog_desc {
+      text-align: center;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+  .wcw_data_info {
+    display: flex;
+    .wcw_data_info_item {
+      flex: 1;
+      height: 67px;
+      text-align: center;
+      .wcw_item_text {
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+      }
+      .wcw_item_num {
+        height: 39px;
+        line-height: 39px;
+        font-size: 20px;
+      }
+    }
+  }
+}

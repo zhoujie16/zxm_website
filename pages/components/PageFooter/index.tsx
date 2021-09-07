@@ -1,5 +1,4 @@
 import React, { useEffect, useCallback, useState } from "react";
-import PageNav from "./../PageNav";
 
 class Index extends React.Component {
   state = {};
@@ -8,9 +7,8 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="w_page_header full_page">
-        <PageNav />
-        <div className="blog_name_center">111</div>
+      <div className="w_page_footer">
+        <div className="wpf_copyright">©2019 - 2021 By Jerry</div>
       </div>
     );
   }
