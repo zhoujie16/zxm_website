@@ -1,21 +1,52 @@
 import React, { useEffect, useCallback, useState } from "react";
+import PageNavItem from "./PageNavItem";
 
-class Index extends React.Component {
-  state = {};
-
-  componentDidMount() {}
-
-  render() {
-    return (
-      <div className="w_nav_wrap">
-        <div className="nav_inner">
-          <div className="nav_web_name">nav_web_name</div>
-          <div className="nav_menu">nav_menu</div>
+const Index = () => {
+  // type: btn nav link
+  let navList = [
+    {
+      name: "搜索",
+      icon: "fas fa-search fa-fw",
+      type: "btn",
+    },
+    {
+      name: "首页",
+      icon: "fa-fw fas fa-home",
+      type: "link",
+    },
+    {
+      name: "目录",
+      icon: "fa-fw fas fa-compass",
+      type: "drop",
+    },
+    {
+      name: "文档",
+      icon: "fa-fw fas fa-book",
+      type: "drop",
+    },
+    {
+      name: "娱乐",
+      icon: "fa-fw fa fa-heartbeat",
+      type: "drop",
+    },
+    {
+      name: "留言板",
+      icon: "fa-fw fas fa-comment-dots",
+      type: "link",
+    },
+  ];
+  return (
+    <div className="w_nav_wrap">
+      <div className="nav_inner">
+        <div className="nav_web_name">nav_web_name</div>
+        <div className="nav_menu">
+          {navList.map((x) => (
+            <PageNavItem itemData={x} key={x.name} />
+          ))}
         </div>
       </div>
-    );
-  }
-}
-
-// Demo页面
+    </div>
+  );
+};
+//
 export default Index;

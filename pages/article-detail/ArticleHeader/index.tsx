@@ -4,7 +4,11 @@ import PageNav from "./../../../components/PageNav";
 const Index = () => {
   return (
     <div className="w_article_header">
-      <PageNav /> 
+      <PageNav />
+      <div className="w_article_header_inner">
+        <div className="w_article_title">哈哈哈哈哈哈</div>
+        <div className="w_article_meta"></div>
+      </div>
     </div>
   );
 };

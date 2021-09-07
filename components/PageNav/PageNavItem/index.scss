@@ -1,0 +1,21 @@
+.w_nav_item {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  .w_nav_item_inner {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .w_nav_item_icon {
+    }
+    .w_nav_item_name {
+    }
+    .w_nav_item_drop {
+      margin-left: 3px;
+      font-size: 14px; 
+    }
+  }
+}
