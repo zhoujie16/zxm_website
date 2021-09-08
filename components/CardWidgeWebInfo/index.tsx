@@ -22,6 +22,7 @@ const Index = () => {
           <div className="wcw_item_num">11</div>
         </div>
       </div>
+      <div className="button__animated">哈哈哈</div>
     </div>
   );
 };

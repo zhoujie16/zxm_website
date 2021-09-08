@@ -22,6 +22,69 @@ a {
 .w_article_aside {
   flex: 0 0 280px;
 }
+
+.w_card_info_btn {
+  position: relative;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: color 1s;
+  width: 100%;
+  cursor: pointer;
+  background: rgb(73, 177, 245);
+  &:before {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(73, 177, 245);
+    content: "";
+    transition: transform 0.5s ease-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+  }
+  &:hover:before {
+    background: #ff7242;
+    transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+    transform: scaleX(1);
+  }
+}
+
+.button__animated {
+  position: relative;
+  z-index: 1;
+  transition: color 1s;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #49b1f5;
+  color: #fff;
+  font-size: 14px;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #ff7242;
+    content: "";
+    transition: transform 0.5s ease-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+  }
+  &:hover:before {
+    transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+    transform: scaleX(1);
+  }
+}
+
 @import "./../components/PageHeader/index.scss";
 @import "./../components/PageMain/index.scss";
 @import "./../components/PageNav/index.scss";

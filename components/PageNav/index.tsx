@@ -18,16 +18,67 @@ const Index = () => {
       name: "目录",
       icon: "fa-fw fas fa-compass",
       type: "drop",
+      children: [
+        {
+          name: "测试测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+      ],
     },
     {
       name: "文档",
       icon: "fa-fw fas fa-book",
       type: "drop",
+      children: [
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+      ],
     },
     {
       name: "娱乐",
       icon: "fa-fw fa fa-heartbeat",
       type: "drop",
+      children: [
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+        {
+          name: "测试",
+          icon: "fa-fw fas fa-home",
+          type: "link",
+        },
+      ],
     },
     {
       name: "留言板",
