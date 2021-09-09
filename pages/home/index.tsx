@@ -22,3 +22,28 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+// export async function getStaticProps() {
+//   console.log("getStaticProps");
+//   // Get external data from the file system, API, DB, etc.
+//   const data = {
+//     test1: "test1",
+//   };
+
+//   // The value of the `props` key will be
+//   //  passed to the `Home` component
+//   return {
+//     props: {
+//       test2: "test2",
+//     },
+//   };
+// }
+
+export async function getServerSideProps(context: any) {
+  console.log("getServerSideProps", context);
+  return {
+    props: {
+      // props for your component
+    },
+  };
+}
