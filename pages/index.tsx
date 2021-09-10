@@ -1,12 +1,7 @@
-import type { NextPage } from "next";
-import BaseHead from "./../components/BaseHead";
+import Home from "./home";
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <BaseHead />
-    </div>
-  );
+const Index = () => {
+  return <Home />;
 };
 
-export default Home;
+export default Index;
