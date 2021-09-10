@@ -1987,7 +1987,7 @@
           t(), document.addEventListener("pjax:complete", t);
         });
       </script>
-      <!-- <script
+      <script
         defer
         id="ribbon"
         src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js"
@@ -1996,9 +1996,9 @@
         zindex="-1"
         mobile="true"
         data-click="true"
-      ></script> -->
-      <!-- <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script> -->
-      <!-- <script>
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+      <script>
         let pjaxSelectors = [
           "title",
           "#config-diff",
@@ -2054,7 +2054,12 @@
           document.addEventListener("pjax:error", (e) => {
             404 === e.request.status && pjax.loadUrl("/404.html");
           });
-      </script> -->
+      </script>
+      <script
+        async
+        data-pjax
+        src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+      ></script>
     </div>
   </body>
 </html>
