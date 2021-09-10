@@ -1,5 +1,5 @@
+import PageAsideContent from "./../../../components/PageAsideContent";
 
-import PageAsideContent from './../../../components/PageAsideContent'
 const Index = () => {
   return (
     <main className="layout" id="content-inner">
