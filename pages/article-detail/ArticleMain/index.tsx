@@ -1,6 +1,5 @@
 import React, { useEffect, useCallback, useState } from "react";
 import PageAsideContent from "./../../../components/PageAsideContent";
-import ArticleContent from "./../ArticleContent";
 import ArticleCopyright from "./../ArticleCopyright";
 import ArticleTagShare from "./../ArticleTagShare";
 import ArticlePostReward from "./../ArticlePostReward";
@@ -12,7 +11,7 @@ const Index = () => {
   return (
     <main className="layout" id="content-inner">
       <div id="post">
-        <ArticleContent />
+        <article className="post-content" id="article-container"></article>
         <ArticleCopyright />
         <ArticleTagShare />
         <ArticlePostReward />

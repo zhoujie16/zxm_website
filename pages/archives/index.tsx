@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import PageFooter from "./../../components/PageFooter";
-import CategoriesMain from "./CategoriesMain";
-import CategoriesHeader from "./CategoriesHeader";
+import ArchivesMain from "./ArchivesMain";
+import ArchivesHeader from "./ArchivesHeader";
 
 const Home: NextPage = () => {
   return (
@@ -15,8 +15,8 @@ const Home: NextPage = () => {
         />
       </Head>
       <div className="page" id="body-wrap">
-        <CategoriesHeader />
-        <CategoriesMain />
+        <ArchivesHeader />
+        <ArchivesMain />
         <PageFooter />
       </div>
     </div>
