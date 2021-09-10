@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import PageHeader from "./PageHeader";
 import PageMain from "./PageMain";
-import PageFooter from "./PageFooter";
+import PageFooter from "././../../components/PageFooter";
 
 const Home: NextPage = () => {
   return (
