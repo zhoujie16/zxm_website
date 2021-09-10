@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+import BaseHead from "./../../components/BaseHead";
 import PageHeader from "./PageHeader";
 import PageMain from "./PageMain";
 import PageFooter from "././../../components/PageFooter";
@@ -7,13 +7,7 @@ import PageFooter from "././../../components/PageFooter";
 const Home: NextPage = () => {
   return (
     <div className="z_page_wrap">
-      <Head>
-        <title>Create Next App</title>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
-        />
-      </Head>
+      <BaseHead />
       <div className="page" id="body-wrap">
         <PageHeader />
         <PageMain />
