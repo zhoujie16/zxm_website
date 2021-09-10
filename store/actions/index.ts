@@ -1,10 +1,4 @@
-// REDUX ACTION TYPES
-const types = {
-  TICK: "TICK",
-  INCREMENT: "INCREMENT",
-  DECREMENT: "DECREMENT",
-  RESET: "RESET",
-};
+import * as types from "./../types";
 
 // INITIALIZES CLOCK ON SERVER
 export const serverRenderClock = () => (dispatch) =>

@@ -1,12 +1,5 @@
 import { combineReducers } from "redux";
-
-// REDUX ACTION TYPES
-const types = {
-  TICK: "TICK",
-  INCREMENT: "INCREMENT",
-  DECREMENT: "DECREMENT",
-  RESET: "RESET",
-};
+import * as types from "./../types";
 
 // COUNTER REDUCER
 const counterReducer = (state = 0, { type }) => {
