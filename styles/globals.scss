@@ -84,13 +84,23 @@ a {
     transform: scaleX(1);
   }
 }
-
-@import "./../components/PageHeader/index.scss";
-@import "./../components/PageMain/index.scss";
-@import "./../components/PageNav/index.scss";
-@import "./../components/CardWidgeWebInfo/index.scss";
-@import "./../components/CardWidgeAnnouncement/index.scss";
-@import "./../components/RecentPostItem/index.scss";
-@import "./../components/PageFooter/index.scss";
-@import "./../pages/article-detail/index.scss";
-@import "./../pages/categories/index.scss";
+@import "./butterfly.css";
+#nav {
+  opacity: 1;
+}
+.justified-gallery img {
+  opacity: 1;
+}
+#post-meta time,
+#recent-posts time {
+  display: inline !important;
+}
+// @import "./../components/PageHeader/index.scss";
+// @import "./../components/PageMain/index.scss";
+// @import "./../components/PageNav/index.scss";
+// @import "./../components/CardWidgeWebInfo/index.scss";
+// @import "./../components/CardWidgeAnnouncement/index.scss";
+// @import "./../components/RecentPostItem/index.scss";
+// @import "./../components/PageFooter/index.scss";
+// @import "./../pages/article-detail/index.scss";
+// @import "./../pages/categories/index.scss";

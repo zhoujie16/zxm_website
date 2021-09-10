@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import PageHeader from "./../../components/PageHeader";
-import PageMain from "./../../components/PageMain";
-import PageFooter from "./../../components/PageFooter";
+import PageHeader from "./PageHeader";
+import PageMain from "./PageMain";
+import PageFooter from "./PageFooter";
 
 const Home: NextPage = () => {
   return (
@@ -14,9 +14,11 @@ const Home: NextPage = () => {
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
         />
       </Head>
-      <PageHeader />
-      <PageMain />
-      <PageFooter />
+      <div className="page" id="body-wrap">
+        <PageHeader />
+        <PageMain />
+        <PageFooter />
+      </div>
     </div>
   );
 };

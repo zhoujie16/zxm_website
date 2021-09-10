@@ -14,9 +14,7 @@ const Home: NextPage = () => {
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
         />
       </Head>
-      <ArticleHeader />
-      <ArticleMain />
-      <PageFooter />
+      
     </div>
   );
 };
