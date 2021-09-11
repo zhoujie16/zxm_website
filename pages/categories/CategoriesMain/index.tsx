@@ -1,10 +1,10 @@
 import PageAsideContent from "./../../../components/PageAsideContent";
 import Link from "next/link";
+import { connect } from "react-redux";
 
-const Index = ({ appStore }) => {
-  let { categoriesList = [] } = appStore;
-  console.log("categoriesList", categoriesList);
-  // categoriesList = categoriesList.filter(x=>x.is_banner)
+const Index = (props: any) => {
+  let { mainCategoriesList } = props;
+  console.log("categoriesList", mainCategoriesList);
   return (
     <main className="layout" id="content-inner">
       <div id="page">
@@ -14,7 +14,7 @@ const Index = ({ appStore }) => {
           </div>
           <div>
             <ul className="category-list">
-              {categoriesList.map((item) => (
+              {mainCategoriesList.map((item) => (
                 <li className="category-list-item">
                   <Link
                     href={{
@@ -37,4 +37,4 @@ const Index = ({ appStore }) => {
   );
 };
 
-export default Index;
+export default connect((state) => state)(Index);

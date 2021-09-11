@@ -1,8 +1,8 @@
 import Link from "next/link";
+import { connect } from "react-redux";
 
-const Index = ({ appStore }) => {
-  let { column } = appStore;
-  let columnList = column[0].children;
+const Index = (props: any) => {
+  let columnList = props.columnList[0].children;
   return (
     <nav id="nav">
       <span id="blog_name">
@@ -184,4 +184,4 @@ const Index = ({ appStore }) => {
   );
 };
 
-export default Index;
+export default connect((state) => state)(Index);

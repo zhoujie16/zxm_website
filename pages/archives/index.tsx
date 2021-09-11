@@ -5,12 +5,12 @@ import ArchivesMain from "./ArchivesMain";
 import ArchivesHeader from "./ArchivesHeader";
 import { ajax_column_query } from "./../api";
 
-const Home: NextPage = ({ appStore }) => {
+const Home: NextPage = () => {
   return (
     <div className="z_page_wrap">
       <BaseHead />
       <div className="page" id="body-wrap">
-        <ArchivesHeader appStore={appStore} />
+        <ArchivesHeader />
         <ArchivesMain />
         <PageFooter />
       </div>
@@ -21,7 +21,7 @@ const Home: NextPage = ({ appStore }) => {
 export default Home;
 
 export async function getServerSideProps(context: any) {
-  let column = await ajax_column_query({});
+  let column = await ajax_column_query();
   return {
     props: {
       appStore: {
