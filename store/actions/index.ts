@@ -1,31 +1,8 @@
-import * as types from "./../types";
+import { actionTypes } from "./../actionTypes";
 
-// INITIALIZES CLOCK ON SERVER
-export const serverRenderClock = () => (dispatch) =>
-  dispatch({
-    type: types.TICK,
-    payload: { light: false, ts: Date.now() },
-  });
-
-// INITIALIZES CLOCK ON CLIENT
-export const startClock = () => (dispatch) =>
-  setInterval(() => {
-    dispatch({ type: types.TICK, payload: { light: true, ts: Date.now() } });
-  }, 1000);
-
-// INCREMENT COUNTER BY 1
-export const incrementCount = () => ({ type: types.INCREMENT });
-
-// DECREMENT COUNTER BY 1
-export const decrementCount = () => ({ type: types.DECREMENT });
-
-// RESET COUNTER
-export const resetCount = () => ({ type: types.RESET });
-
-//
-export const Get_Column_List = () => (dispatch) =>
-  setTimeout(() => {
-    let list = [1, 2, 3];
-    console.log("获取分类");
-    dispatch({ type: types.Get_Column_List, payload: { content: list } });
-  }, 5000);
+export function Get_Column_List() {
+  return {
+    type: "Get_Column_List",
+    payload: { a: 1 },
+  };
+}

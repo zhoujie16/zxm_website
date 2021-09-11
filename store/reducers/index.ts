@@ -1,61 +1,57 @@
-import { combineReducers } from "redux";
-import * as types from "./../types";
+import { actionTypes } from "./../actionTypes";
 
-// COUNTER REDUCER
-const counterReducer = (state = 0, { type }) => {
-  switch (type) {
-    case types.INCREMENT:
-      return state + 1;
-    case types.DECREMENT:
-      return state - 1;
-    case types.RESET:
-      return 0;
-    default:
-      return state;
-  }
+export const initState = {
+  columnList: [],
 };
 
-// INITIAL TIMER STATE
-const initialTimerState = {
-  lastUpdate: 0,
-  light: false,
-};
-
-// TIMER REDUCER
-const timerReducer = (state = initialTimerState, { type, payload }) => {
-  switch (type) {
-    case types.TICK:
-      return {
-        lastUpdate: payload.ts,
-        light: !!payload.light,
-      };
-    default:
-      return state;
-  }
-};
-
-const homeReducer = (
-  state = {
-    columnList: [],
-  },
-  { type, payload }
-) => {
-  switch (type) {
-    case types.Get_Column_List:
+function reducer(state = initState, action) {
+  switch (action.type) {
+    case actionTypes.FAILURE:
       return {
         ...state,
-        columnList: payload.content,
+        ...{ error: action.error },
       };
+
+    case actionTypes.INCREMENT:
+      return {
+        ...state,
+        ...{ count: state.count + 1 },
+      };
+
+    case actionTypes.DECREMENT:
+      return {
+        ...state,
+        ...{ count: state.count - 1 },
+      };
+
+    case actionTypes.RESET:
+      return {
+        ...state,
+        ...{ count: exampleInitialState.count },
+      };
+
+    case actionTypes.LOAD_DATA_SUCCESS:
+      return {
+        ...state,
+        ...{ placeholderData: action.data },
+      };
+
+    case actionTypes.TICK_CLOCK:
+      return {
+        ...state,
+        ...{ lastUpdate: action.ts, light: !!action.light },
+      };
+
+    case "Get_Column_List":
+      console.log("Get_Column_List reduces");
+      return {
+        ...state,
+        columnList: action.payload,
+      };
+
     default:
       return state;
   }
-};
+}
 
-// COMBINED REDUCERS
-const reducers = {
-  counter: counterReducer,
-  timer: timerReducer,
-  home: homeReducer,
-};
-
-export default combineReducers(reducers);
+export default reducer;

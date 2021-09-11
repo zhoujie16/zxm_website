@@ -1,42 +1,29 @@
-import { useMemo } from "react";
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import thunkMiddleware from "redux-thunk";
-import reducers from "./reducers";
+// store.ts
 
-let store: any;
+import { createStore, AnyAction, Store } from "redux";
+import { createWrapper, Context, HYDRATE } from "next-redux-wrapper";
 
-function initStore(initialState: any) {
-  return createStore(
-    reducers,
-    initialState,
-    composeWithDevTools(applyMiddleware(thunkMiddleware))
-  );
+export interface State {
+  tick: string;
 }
 
-export const initializeStore = (preloadedState: any) => {
-  let _store = store ?? initStore(preloadedState);
-
-  // After navigating to a page with an initial Redux state, merge that state
-  // with the current state in the store, and create a new store
-  if (preloadedState && store) {
-    _store = initStore({
-      ...store.getState(),
-      ...preloadedState,
-    });
-    // Reset the current store
-    store = undefined;
+// create your reducer
+const reducer = (state: State = { tick: "init" }, action: AnyAction) => {
+  switch (action.type) {
+    case HYDRATE:
+      console.log("HYDRATE111");
+      // Attention! This will overwrite client state! Real apps should use proper reconciliation.
+      return { ...state, ...action.payload };
+    case "TICK":
+      console.log("TICK1111");
+      return { ...state, tick: action.payload };
+    default:
+      return state;
   }
-
-  // For SSG and SSR always create a new store
-  if (typeof window === "undefined") return _store;
-  // Create the store once in the client
-  if (!store) store = _store;
-
-  return _store;
 };
 
-export function useStore(initialState: any) {
-  const store = useMemo(() => initializeStore(initialState), [initialState]);
-  return store;
-}
+// create a makeStore function
+const makeStore = (context: Context) => createStore(reducer);
+
+// export an assembled wrapper
+export const wrapper = createWrapper<Store<State>>(makeStore, { debug: true });

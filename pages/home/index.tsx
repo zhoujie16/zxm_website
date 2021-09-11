@@ -4,13 +4,17 @@ import PageHeader from "./PageHeader";
 import PageMain from "./PageMain";
 import PageFooter from "././../../components/PageFooter";
 import { ajax_column_query } from "./../api";
+import { Get_Column_List } from "./../../store/actions";
+import { wrapper, State } from "./../../store";
+import { connect } from "react-redux";
 
-const Home: NextPage = ({ appStore }) => {
+const Home: NextPage = (props) => {
+  console.log("props", props);
   return (
     <div className="z_page_wrap">
       <BaseHead />
       <div className="page" id="body-wrap">
-        <PageHeader appStore={appStore} />
+        {/* <PageHeader appStore={appStore} /> */}
         <PageMain />
         <PageFooter />
       </div>
@@ -18,27 +22,29 @@ const Home: NextPage = ({ appStore }) => {
   );
 };
 
-export default Home;
+// export default Home;
 
-// export async function getStaticProps() {
-//   console.log("getStaticProps");
-//   const data = {
-//     test1: "test1",
-//   };
+// export async function getServerSideProps(context: any) {
+//   let a = await Get_Column_List();
+//   console.log(context);
+//   let column = await ajax_column_query();
 //   return {
 //     props: {
-//       test2: "test2",
+//       appStore: {
+//         column,
+//       },
 //     },
 //   };
 // }
 
-export async function getServerSideProps(context: any) {
-  let column = await ajax_column_query({});
-  return {
-    props: {
-      appStore: {
-        column,
-      },
-    },
-  };
-}
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    ({ req, res, ...etc }) => {
+      console.log(
+        "2. Page.getServerSideProps uses the store to dispatch things"
+      );
+      store.dispatch({ type: "TICK", payload: "was set in other page" });
+    }
+);
+
+export default connect((state: State) => state)(Home);
