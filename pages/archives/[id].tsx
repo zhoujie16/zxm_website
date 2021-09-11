@@ -1,21 +1,20 @@
 import type { NextPage } from "next";
 import BaseHead from "./../../components/BaseHead";
-import PageHeader from "./PageHeader";
-import PageMain from "./PageMain";
-import PageFooter from "././../../components/PageFooter";
-import { wrapper } from "./../../store";
+import PageFooter from "./../../components/PageFooter";
+import ArchivesMain from "./ArchivesMain";
+import ArchivesHeader from "./ArchivesHeader";
+import { ajax_article_query } from "./../api";
+import { wrapper } from "../../store";
+import { getPageCommonData } from "../../utils";
 import { connect } from "react-redux";
-import { getPageCommonData } from "./../../utils";
-import { ajax_article_query } from "../api";
 
-const Home: NextPage = (props) => {
-  console.log("props", props);
+const Home: NextPage = () => {
   return (
     <div className="z_page_wrap">
       <BaseHead />
       <div className="page" id="body-wrap">
-        <PageHeader />
-        <PageMain />
+        <ArchivesHeader />
+        <ArchivesMain />
         <PageFooter />
       </div>
     </div>
@@ -27,7 +26,10 @@ export const getServerSideProps = wrapper.getServerSideProps(
     ({ req, res, ...etc }): any => {
       let callback = async () => {
         await getPageCommonData(store);
-        let mainArticleData = await ajax_article_query({});
+        let { params }: any = etc;
+        let mainArticleData = await ajax_article_query({
+          column_id: Number(params.id),
+        });
         store.dispatch({
           type: "Get_mainArticleData",
           payload: mainArticleData,

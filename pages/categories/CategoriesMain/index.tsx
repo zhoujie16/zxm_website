@@ -18,7 +18,7 @@ const Index = (props: any) => {
                 <li className="category-list-item">
                   <Link
                     href={{
-                      pathname: "/categories/[id]",
+                      pathname: "/archives/[id]",
                       query: { id: item.id },
                     }}
                   >

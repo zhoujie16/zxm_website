@@ -1,213 +1,16 @@
 import CardWidgetInfo from "./CardWidgetInfo";
 import CardWidgetCannouncement from "./CardWidgetCannouncement";
+import CardWidgetWebInfo from "./CardWidgetWebInfo";
 
 const Index = () => {
   return (
     <div className="aside-content" id="aside-content">
       <CardWidgetInfo />
       <CardWidgetCannouncement />
+      <CardWidgetWebInfo />
 
-      {/* <div className="card-widget card-docs card-categories">
-    <div className="item-headline">
-      <i className="fas fa-car-side"></i>
-      <span>文檔目錄</span>
-    </div>
-    <div className="item-content">
-      <ul className="card-category-list">
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/21cfbf15/">
-            🚀 快速開始
-          </a>
-        </li>
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/dc584b87/">
-            📑 主題頁面
-          </a>
-        </li>
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/4aa8abbe/">
-            🛠 主題配置-1
-          </a>
-        </li>
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/ceeb73f/">
-            ⚔️ 主題配置-2
-          </a>
-        </li>
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/98d20436/">
-            ❓ 主題問答
-          </a>
-        </li>
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/4073eda/">
-            ⚡️ 進階教程
-          </a>
-        </li>
-        <li className="card-category-list-item">
-          <a className="card-category-list-link" href="/posts/198a4240/">
-            ✨ 更新日誌
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-   */}
       <div className="sticky_layout">
-        {/* <div className="card-widget card-recent-post">
-      <div className="item-headline">
-        <i className="fas fa-history"></i>
-        <span>最新文章</span>
-      </div>
-      <div className="aside-list">
-        <div className="aside-list-item">
-          <a
-            className="thumbnail"
-            href="/posts/7670b080/"
-            title="Butterfly 美化/優化/魔改 教程合集"
-          >
-            <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
-              // onerror='this.onerror=null,this.src="/img/404.jpg"'
-              alt="Butterfly 美化/優化/魔改 教程合集"
-            />
-          </a>
-          <div className="content">
-            <a
-              className="title"
-              href="/posts/7670b080/"
-              title="Butterfly 美化/優化/魔改 教程合集"
-            >
-              Butterfly 美化/優化/魔改 教程合集
-            </a>
-            <time
-              // datetime="2021-01-02T10:11:22.000Z"
-              title="發表於 2021-01-02 18:11:22"
-            >
-              2021-01-02
-            </time>
-          </div>
-        </div>
-        <div className="aside-list-item">
-          <a
-            className="thumbnail"
-            href="/posts/ea33ab97/"
-            title="自定義側邊欄"
-          >
-            <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
-              // onerror='this.onerror=null,this.src="/img/404.jpg"'
-              alt="自定義側邊欄"
-            />
-          </a>
-          <div className="content">
-            <a
-              className="title"
-              href="/posts/ea33ab97/"
-              title="自定義側邊欄"
-            >
-              自定義側邊欄
-            </a>
-            <time
-              // datetime="2020-12-30T13:48:10.000Z"
-              title="發表於 2020-12-30 21:48:10"
-            >
-              2020-12-30
-            </time>
-          </div>
-        </div>
-        <div className="aside-list-item">
-          <a
-            className="thumbnail"
-            href="/posts/c9711c19/"
-            title="當設置 top_img 為 false 時"
-          >
-            <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/when-set-the-top-img-to-false.png"
-              // onerror='this.onerror=null,this.src="/img/404.jpg"'
-              alt="當設置 top_img 為 false 時"
-            />
-          </a>
-          <div className="content">
-            <a
-              className="title"
-              href="/posts/c9711c19/"
-              title="當設置 top_img 為 false 時"
-            >
-              當設置 top_img 為 false 時
-            </a>
-            <time
-              // datetime="2020-10-28T06:15:34.000Z"
-              title="發表於 2020-10-28 14:15:34"
-            >
-              2020-10-28
-            </time>
-          </div>
-        </div>
-        <div className="aside-list-item">
-          <a
-            className="thumbnail"
-            href="/posts/507c070f/"
-            title="Butterfly添加全局吸底Aplayer教程"
-          >
-            <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png"
-              // onerror='this.onerror=null,this.src="/img/404.jpg"'
-              alt="Butterfly添加全局吸底Aplayer教程"
-            />
-          </a>
-          <div className="content">
-            <a
-              className="title"
-              href="/posts/507c070f/"
-              title="Butterfly添加全局吸底Aplayer教程"
-            >
-              Butterfly添加全局吸底Aplayer教程
-            </a>
-            <time
-              // datetime="2020-07-31T11:02:28.000Z"
-              title="發表於 2020-07-31 19:02:28"
-            >
-              2020-07-31
-            </time>
-          </div>
-        </div>
-        <div className="aside-list-item">
-          <a
-            className="thumbnail"
-            href="/posts/b37b5fe3/"
-            title="自定義代碼配色"
-          >
-            <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/CODE-COLOR-COVER.png"
-              // onerror='this.onerror=null,this.src="/img/404.jpg"'
-              alt="自定義代碼配色"
-            />
-          </a>
-          <div className="content">
-            <a
-              className="title"
-              href="/posts/b37b5fe3/"
-              title="自定義代碼配色"
-            >
-              自定義代碼配色
-            </a>
-            <time
-              // datetime="2020-06-13T12:41:59.000Z"
-              title="發表於 2020-06-13 20:41:59"
-            >
-              2020-06-13
-            </time>
-          </div>
-        </div>
-      </div>
-    </div>
-     */}
+       
         {/* <div className="card-widget ads-wrap">
       <ins
         className="adsbygoogle"
@@ -286,6 +89,7 @@ const Index = () => {
       </ul>
     </div>
      */}
+        {/*  
         <div className="card-widget card-tags">
           <div className="item-headline">
             <i className="fas fa-tags"></i>
@@ -384,7 +188,7 @@ const Index = () => {
             </a>
           </div>
         </div>
-
+      */}
         {/* <div className="card-widget card-archives">
       <div className="item-headline">
         <i className="fas fa-archive"></i>
@@ -445,46 +249,6 @@ const Index = () => {
       </ul>
     </div>
      */}
-        <div className="card-widget card-webinfo">
-          <div className="item-headline">
-            <i className="fas fa-chart-line"></i>
-            <span>網站資訊</span>
-          </div>
-          <div className="webinfo">
-            <div className="webinfo-item">
-              <div className="item-name">文章數目 :</div>
-              <div className="item-count">18</div>
-            </div>
-            <div className="webinfo-item">
-              <div className="item-name">已運行時間 :</div>
-              <div
-                className="item-count"
-                id="runtimeshow"
-                data-publishdate="2019-11-13T00:00:00.000Z"
-              ></div>
-            </div>
-            <div className="webinfo-item">
-              <div className="item-name">本站總字數 :</div>
-              <div className="item-count">50.6k</div>
-            </div>
-            <div className="webinfo-item">
-              <div className="item-name">本站訪客數 :</div>
-              <div className="item-count" id="busuanzi_value_site_uv"></div>
-            </div>
-            <div className="webinfo-item">
-              <div className="item-name">本站總訪問量 :</div>
-              <div className="item-count" id="busuanzi_value_site_pv"></div>
-            </div>
-            <div className="webinfo-item">
-              <div className="item-name">最後更新時間 :</div>
-              <div
-                className="item-count"
-                id="last-push-date"
-                data-lastpushdate="2021-09-09T09:59:12.006Z"
-              ></div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
