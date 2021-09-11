@@ -14,8 +14,8 @@ const Index = () => {
             >
               <img
                 className="post-qr-code-img"
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/wechat.jpg"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/wechat.jpg"
                 alt="微信"
               />
             </a>
@@ -29,8 +29,8 @@ const Index = () => {
             >
               <img
                 className="post-qr-code-img"
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipay.jpg"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipay.jpg"
                 alt="支付寶"
               />
             </a>
@@ -44,8 +44,8 @@ const Index = () => {
             >
               <img
                 className="post-qr-code-img"
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipayhk.jpg"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipayhk.jpg"
                 alt="支付寶香港"
               />
             </a>

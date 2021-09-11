@@ -20,8 +20,8 @@ const Index = (props: any) => {
             <a href="/posts/21cfbf15/" title="Butterfly 安裝文檔(一) 快速開始">
               <img
                 className="post_bg"
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
                 alt="Butterfly 安裝文檔(一) 快速開始"
               />
@@ -95,8 +95,8 @@ const Index = (props: any) => {
             >
               <img
                 className="post_bg"
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
                 alt="Butterfly 美化/優化/魔改 教程合集"
               />
@@ -161,8 +161,8 @@ const Index = (props: any) => {
             <a href="/posts/ea33ab97/" title="自定義側邊欄">
               <img
                 className="post_bg"
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
                 alt="自定義側邊欄"
               />

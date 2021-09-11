@@ -6,7 +6,7 @@ const Index = () => {
         <div className="avatar-img">
           <img
             src="https://gitee.com/zz16/upic/raw/master/2020/04/1586355398747.jpg"
-            // data-lazy-src="/img/avatar.png"
+            // src="/img/avatar.png"
             // onerror='this.onerror=null,this.src="/img/friend_404.gif"'
             alt="avatar"
           />

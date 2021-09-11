@@ -24,8 +24,8 @@ const Index = (props: any) => {
               title="Butterfly 美化/優化/魔改 教程合集"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
                 alt="Butterfly 美化/優化/魔改 教程合集"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -58,8 +58,8 @@ const Index = (props: any) => {
               title="自定義側邊欄"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
                 alt="自定義側邊欄"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -91,8 +91,8 @@ const Index = (props: any) => {
               title="當設置 top_img 為 false 時"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/when-set-the-top-img-to-false.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/when-set-the-top-img-to-false.png"
                 alt="當設置 top_img 為 false 時"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -124,8 +124,8 @@ const Index = (props: any) => {
               title="Butterfly添加全局吸底Aplayer教程"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png"
                 alt="Butterfly添加全局吸底Aplayer教程"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -157,8 +157,8 @@ const Index = (props: any) => {
               title="自定義代碼配色"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/CODE-COLOR-COVER.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/CODE-COLOR-COVER.png"
                 alt="自定義代碼配色"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -190,8 +190,8 @@ const Index = (props: any) => {
               title="Butterfly 打賞"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-donate-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-donate-cover.png"
                 alt="Butterfly 打賞"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -223,8 +223,8 @@ const Index = (props: any) => {
               title="Butterfly 安裝文檔(七) 更新日誌"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-07-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-07-cover.png"
                 alt="Butterfly 安裝文檔(七) 更新日誌"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -256,8 +256,8 @@ const Index = (props: any) => {
               title="Butterfly 安裝文檔(六) 進階教程"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-06-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-06-cover.png"
                 alt="Butterfly 安裝文檔(六) 進階教程"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -289,8 +289,8 @@ const Index = (props: any) => {
               title="Butterfly 安裝文檔(五) 主題問答"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-doc-05-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-doc-05-cover.png"
                 alt="Butterfly 安裝文檔(五) 主題問答"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />
@@ -322,8 +322,8 @@ const Index = (props: any) => {
               title="Butterfly 安裝文檔(四) 主題配置-2"
             >
               <img
-                src="/img/loading.gif"
-                data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-04-cover.png"
+                // src="/img/loading.gif"
+                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-04-cover.png"
                 alt="Butterfly 安裝文檔(四) 主題配置-2"
                 // onerror='this.onerror=null,this.src="/img/404.jpg"'
               />

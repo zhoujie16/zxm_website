@@ -5,8 +5,8 @@ const Index = () => {
         <a href="/posts/dc584b87/">
           <img
             className="prev-cover"
-            src="/img/loading.gif"
-            data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png"
+            // src="/img/loading.gif"
+            src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png"
             // onerror='onerror=null,src="/img/404.jpg"'
             alt="cover of previous post"
           />
@@ -20,8 +20,8 @@ const Index = () => {
         <a href="/posts/39b121ef/">
           <img
             className="next-cover"
-            src="/img/loading.gif"
-            data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Hexo-Built-in-Tag-Plugins-COVER.png"
+            // src="/img/loading.gif"
+            src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Hexo-Built-in-Tag-Plugins-COVER.png"
             // onerror='onerror=null,src="/img/404.jpg"'
             alt="cover of next post"
           />

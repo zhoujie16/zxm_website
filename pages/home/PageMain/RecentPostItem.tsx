@@ -15,7 +15,7 @@ const Index = (props: any) => {
           <img
             className="post_bg"
             src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
-            // data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
+            // src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
             // onerror='this.onerror=null,this.src="/img/404.jpg"'
             alt={title}
           />

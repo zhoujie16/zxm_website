@@ -14,8 +14,8 @@ const Index = () => {
             title="Butterfly 美化/優化/魔改 教程合集"
           >
             <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
+              // src="/img/loading.gif"
+              src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
               // onerror='this.onerror=null,this.src="/img/404.jpg"'
               alt="Butterfly 美化/優化/魔改 教程合集"
             />
@@ -39,8 +39,8 @@ const Index = () => {
         <div className="aside-list-item">
           <a className="thumbnail" href="/posts/ea33ab97/" title="自定義側邊欄">
             <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
+              // src="/img/loading.gif"
+              src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/aside-diy-cover.png"
               // onerror='this.onerror=null,this.src="/img/404.jpg"'
               alt="自定義側邊欄"
             />
@@ -64,8 +64,8 @@ const Index = () => {
             title="當設置 top_img 為 false 時"
           >
             <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/when-set-the-top-img-to-false.png"
+              // src="/img/loading.gif"
+              src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/when-set-the-top-img-to-false.png"
               // onerror='this.onerror=null,this.src="/img/404.jpg"'
               alt="當設置 top_img 為 false 時"
             />
@@ -93,8 +93,8 @@ const Index = () => {
             title="Butterfly添加全局吸底Aplayer教程"
           >
             <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png"
+              // src="/img/loading.gif"
+              src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png"
               // onerror='this.onerror=null,this.src="/img/404.jpg"'
               alt="Butterfly添加全局吸底Aplayer教程"
             />
@@ -122,8 +122,8 @@ const Index = () => {
             title="自定義代碼配色"
           >
             <img
-              src="/img/loading.gif"
-              data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/CODE-COLOR-COVER.png"
+              // src="/img/loading.gif"
+              src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/CODE-COLOR-COVER.png"
               // onerror='this.onerror=null,this.src="/img/404.jpg"'
               alt="自定義代碼配色"
             />
