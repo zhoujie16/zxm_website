@@ -1,8 +1,14 @@
 import React, { useEffect, useCallback, useState } from "react";
-
+import { connect } from "react-redux";
 import PageNav from "./../../../components/PageNav";
+import moment from "moment";
 
-const Index = ({appStore}) => {
+const Index = (props: any) => {
+  let { mainArticleDetail } = props;
+  let title = mainArticleDetail.title;
+  let time = moment(Number(mainArticleDetail.release_time)).format(
+    "YYYY-MM-DD"
+  );
   return (
     <header
       className="post-bg"
@@ -12,11 +18,11 @@ const Index = ({appStore}) => {
           "url(https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png)",
       }}
     >
-      <PageNav appStore={appStore}/>
+      <PageNav />
       <div id="post-info">
         <h1 className="post-title">
-          Butterfly 安裝文檔(一) 快速開始
-          <a
+          {title}
+          {/* <a
             className="post-edit-link"
             href="https://github.com/jerryc127/butterfly.js.org/edit/main/source/_posts/Butterfly-安裝文檔-一-快速開始.md"
             rel="external nofollow noreferrer"
@@ -24,21 +30,21 @@ const Index = ({appStore}) => {
             target="_blank"
           >
             <i className="fas fa-pencil-alt"></i>
-          </a>
+          </a> */}
         </h1>
         <div id="post-meta">
           <div className="meta-firstline">
             <span className="post-meta-date">
               <i className="fa-fw post-meta-icon far fa-calendar-alt"></i>
-              <span className="post-meta-label">發表於</span>
+              <span className="post-meta-label">发表于</span>
               <time
-                // datetime="2020-05-28T14:31:46.000Z"
-                title="undefined 2020-05-28 22:31:46"
+              // datetime="2020-05-28T14:31:46.000Z"
+              // title="undefined 2020-05-28 22:31:46"
               >
-                2020-05-28
+                {time}
               </time>
             </span>
-            <span className="post-meta-categories">
+            {/* <span className="post-meta-categories">
               <span className="post-meta-separator">|</span>
               <i className="fas fa-inbox fa-fw post-meta-icon"></i>
               <a
@@ -47,9 +53,9 @@ const Index = ({appStore}) => {
               >
                 Docs文檔
               </a>
-            </span>
+            </span> */}
           </div>
-          <div className="meta-secondline">
+          {/* <div className="meta-secondline">
             <span className="post-meta-separator">|</span>
             <span className="post-meta-wordcount">
               <i className="far fa-file-word fa-fw post-meta-icon"></i>
@@ -69,11 +75,11 @@ const Index = ({appStore}) => {
               <span className="post-meta-label">閱讀量:</span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
   );
 };
 
-export default Index;
+export default connect((state) => state)(Index);

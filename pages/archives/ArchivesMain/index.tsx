@@ -1,11 +1,21 @@
 import PageAsideContent from "./../../../components/PageAsideContent";
+import { connect } from "react-redux";
+import ArticleSortItem from "./ArticleSortItem";
 
-const Index = () => {
+const Index = (props: any) => {
+  let mainArticleData: any = {};
+  mainArticleData = props.mainArticleData;
+  let total = mainArticleData.total;
+  console.log("mainArticleData", mainArticleData);
   return (
     <main className="layout" id="content-inner">
       <div id="archive">
-        <div className="article-sort-title">文章總覽 - 18</div>
+        <div className="article-sort-title">文章总览 - {total}</div>
         <div className="article-sort">
+          {mainArticleData.items.map((x: any) => (
+            <ArticleSortItem itemInfo={x} />
+          ))}
+          {/*
           <div className="article-sort-item year">2021</div>
           <div className="article-sort-item">
             <a
@@ -338,6 +348,7 @@ const Index = () => {
               </a>
             </div>
           </div>
+          */}
         </div>
         <nav id="pagination">
           <div className="pagination">
@@ -356,4 +367,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default connect((state) => state)(Index);

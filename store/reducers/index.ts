@@ -6,6 +6,8 @@ import { createWrapper, Context, HYDRATE } from "next-redux-wrapper";
 export const initState = {
   columnList: [],
   mainCategoriesList: [],
+  mainArticleData: {}, //归档也列表数据
+  mainArticleDetail: {}, // 文章详细的数据
 };
 
 // create your reducer
@@ -23,6 +25,16 @@ const reducer = (state = initState, action: AnyAction) => {
       return {
         ...state,
         mainCategoriesList: action.payload,
+      };
+    case "Get_mainArticleData":
+      return {
+        ...state,
+        mainArticleData: action.payload,
+      };
+    case "Get_mainArticleDetail":
+      return {
+        ...state,
+        mainArticleDetail: action.payload,
       };
     default:
       return state;

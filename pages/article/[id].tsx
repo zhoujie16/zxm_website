@@ -3,32 +3,34 @@ import BaseHead from "./../../components/BaseHead";
 import ArticleHeader from "./ArticleHeader";
 import ArticleMain from "./ArticleMain";
 import PageFooter from "././../../components/PageFooter";
-import { ajax_column_query, ajax_article_queryDetail } from "./../api";
+import { ajax_article_queryDetail } from "./../api";
+import { wrapper } from "../../store";
+import { getPageCommonData } from "../../utils";
+import { connect } from "react-redux";
 
-const Home: NextPage = ({ appStore }) => {
+const Home: NextPage = () => {
   return (
     <div className="z_page_wrap">
       <BaseHead />
       <div className="post" id="body-wrap">
-        <ArticleHeader appStore={appStore} />
-        <ArticleMain appStore={appStore} />
+        <ArticleHeader />
+        <ArticleMain />
         <PageFooter />
       </div>
     </div>
   );
 };
 
-export default Home;
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    (ctx: any): any => {
+      let callback = async () => {
+        await getPageCommonData(store);
+        let a = await ajax_article_queryDetail({ id: ctx.params.id });
+        store.dispatch({ type: "Get_mainArticleDetail", payload: a });
+      };
+      return callback();
+    }
+);
 
-export async function getServerSideProps(context: any) {
-  let column = await ajax_column_query();
-  let articleDetail = await ajax_article_queryDetail({ id: 3 });
-  return {
-    props: {
-      appStore: {
-        column,
-        article: articleDetail,
-      },
-    },
-  };
-}
+export default connect((state) => state)(Home);

@@ -6,16 +6,18 @@ import ArticlePostReward from "./../ArticlePostReward";
 import AdsWrap from "./../AdsWrap";
 import ArticlePagination from "./../ArticlePagination";
 import ArticleRelatedPosts from "./../ArticleRelatedPosts";
+import { connect } from "react-redux";
 
-const Index = ({ appStore }) => {
-  let { article } = appStore;
+const Index = (props: any) => {
+  let { mainArticleDetail } = props;
+  let content_rich = mainArticleDetail.content_rich;
   return (
     <main className="layout" id="content-inner">
       <div id="post">
         <article
           className="post-content"
           id="article-container"
-          dangerouslySetInnerHTML={{ __html: article.content_rich }}
+          dangerouslySetInnerHTML={{ __html: content_rich }}
         ></article>
         <ArticleCopyright />
         <ArticleTagShare />
@@ -30,4 +32,4 @@ const Index = ({ appStore }) => {
 };
 
 //
-export default Index;
+export default connect((state) => state)(Index);

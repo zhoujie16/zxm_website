@@ -19,3 +19,7 @@ export const ajax_column_queryList = () =>
 // 查询文章详细 website/article/queryDetail
 export const ajax_article_queryDetail = (params) =>
   axios.post(`/website/article/queryDetail`, params);
+
+// 查询文章列表 /website/article/query
+export const ajax_article_query = (params) =>
+  axios.post(`/website/article/query`, params);

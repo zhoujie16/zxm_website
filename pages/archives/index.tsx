@@ -3,7 +3,10 @@ import BaseHead from "./../../components/BaseHead";
 import PageFooter from "./../../components/PageFooter";
 import ArchivesMain from "./ArchivesMain";
 import ArchivesHeader from "./ArchivesHeader";
-import { ajax_column_query } from "./../api";
+import { ajax_article_query } from "./../api";
+import { wrapper } from "../../store";
+import { getPageCommonData } from "../../utils";
+import { connect } from "react-redux";
 
 const Home: NextPage = () => {
   return (
@@ -18,15 +21,19 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    ({ req, res, ...etc }): any => {
+      let callback = async () => {
+        await getPageCommonData(store);
+        let mainArticleData = await ajax_article_query({});
+        store.dispatch({
+          type: "Get_mainArticleData",
+          payload: mainArticleData,
+        });
+      };
+      return callback();
+    }
+);
 
-export async function getServerSideProps(context: any) {
-  let column = await ajax_column_query();
-  return {
-    props: {
-      appStore: {
-        column,
-      },
-    },
-  };
-}
+export default connect((state) => state)(Home);
