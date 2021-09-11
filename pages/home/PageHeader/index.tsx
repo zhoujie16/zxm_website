@@ -13,11 +13,11 @@ const Index = () => {
     >
       <PageNav />
       <div id="site-info">
-        <h1 id="site-title">Butterfly</h1>
+        <h1 id="site-title">周小米的博客</h1>
         <div id="site-subtitle">
           <span id="subtitle"></span>
         </div>
-        <div id="site_social_icons">
+        {/* <div id="site_social_icons">
           <a
             className="social-icon"
             href="mailto:i@immyw.com"
@@ -35,7 +35,7 @@ const Index = () => {
           >
             <i className="fas fa-rss"></i>
           </a>
-        </div>
+        </div> */}
       </div>
       <div id="scroll-down">
         <i className="fas fa-angle-down scroll-down-effects"></i>
