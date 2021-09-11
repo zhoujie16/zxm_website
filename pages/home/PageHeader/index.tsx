@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 import PageNav from "./../../../components/PageNav";
 
-const Index = () => {
+const Index = ({ appStore }) => {
   return (
     <header
       className="full_page"
@@ -11,7 +11,7 @@ const Index = () => {
           "url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg)",
       }}
     >
-      <PageNav />
+      <PageNav appStore={appStore} />
       <div id="site-info">
         <h1 id="site-title">Butterfly</h1>
         <div id="site-subtitle">

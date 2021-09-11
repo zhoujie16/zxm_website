@@ -34,10 +34,28 @@ const timerReducer = (state = initialTimerState, { type, payload }) => {
   }
 };
 
+const homeReducer = (
+  state = {
+    columnList: [],
+  },
+  { type, payload }
+) => {
+  switch (type) {
+    case types.Get_Column_List:
+      return {
+        ...state,
+        columnList: payload.content,
+      };
+    default:
+      return state;
+  }
+};
+
 // COMBINED REDUCERS
 const reducers = {
   counter: counterReducer,
   timer: timerReducer,
+  home: homeReducer,
 };
 
 export default combineReducers(reducers);

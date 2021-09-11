@@ -1,6 +1,6 @@
 import PageNav from "./../../../components/PageNav";
 
-const Index = () => {
+const Index = ({appStore}) => {
   return (
     <header
       className="not-home-page"
@@ -10,7 +10,7 @@ const Index = () => {
           "url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/categories.jpg)",
       }}
     >
-      <PageNav />
+      <PageNav appStore={appStore}/>
       <div id="page-site-info">
         <h1 id="site-title">分類</h1>
       </div>

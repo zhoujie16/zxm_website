@@ -21,3 +21,11 @@ export const decrementCount = () => ({ type: types.DECREMENT });
 
 // RESET COUNTER
 export const resetCount = () => ({ type: types.RESET });
+
+//
+export const Get_Column_List = () => (dispatch) =>
+  setTimeout(() => {
+    let list = [1, 2, 3];
+    console.log("获取分类");
+    dispatch({ type: types.Get_Column_List, payload: { content: list } });
+  }, 5000);

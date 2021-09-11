@@ -7,11 +7,16 @@ import AdsWrap from "./../AdsWrap";
 import ArticlePagination from "./../ArticlePagination";
 import ArticleRelatedPosts from "./../ArticleRelatedPosts";
 
-const Index = () => {
+const Index = ({ appStore }) => {
+  let { article } = appStore;
   return (
     <main className="layout" id="content-inner">
       <div id="post">
-        <article className="post-content" id="article-container"></article>
+        <article
+          className="post-content"
+          id="article-container"
+          dangerouslySetInnerHTML={{ __html: article.content_rich }}
+        ></article>
         <ArticleCopyright />
         <ArticleTagShare />
         <ArticlePostReward />

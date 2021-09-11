@@ -3,14 +3,15 @@ import BaseHead from "./../../components/BaseHead";
 import PageFooter from "./../../components/PageFooter";
 import CategoriesMain from "./CategoriesMain";
 import CategoriesHeader from "./CategoriesHeader";
+import { ajax_column_query, ajax_column_queryList } from "./../api";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ appStore }) => {
   return (
     <div className="z_page_wrap">
       <BaseHead />
       <div className="page" id="body-wrap">
-        <CategoriesHeader />
-        <CategoriesMain />
+        <CategoriesHeader appStore={appStore} />
+        <CategoriesMain appStore={appStore} />
         <PageFooter />
       </div>
     </div>
@@ -18,3 +19,17 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getServerSideProps(context: any) {
+  console.log(context.params);
+  let column = await ajax_column_query();
+  let categoriesList = await ajax_column_queryList();
+  return {
+    props: {
+      appStore: {
+        column,
+        categoriesList,
+      },
+    },
+  };
+}

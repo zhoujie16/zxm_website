@@ -1,4 +1,8 @@
-const Index = () => {
+import Link from "next/link";
+
+const Index = ({ appStore }) => {
+  let { column } = appStore;
+  let columnList = column[0].children;
   return (
     <nav id="nav">
       <span id="blog_name">
@@ -13,6 +17,42 @@ const Index = () => {
           </a>
         </div>
         <div className="menus_items">
+          {columnList.map((item) => {
+            return (
+              <div className="menus_item">
+                <Link href={item.route}>
+                  <a className="site-page" rel="external nofollow noreferrer">
+                    <i className={item.tips}></i>
+                    <span>{item.title}</span>
+                    {item.children ? (
+                      <i className="fas fa-chevron-down expand"></i>
+                    ) : (
+                      ""
+                    )}
+                  </a>
+                </Link>
+
+                {item.children ? (
+                  <ul className="menus_item_child">
+                    {item.children.map((x) => {
+                      return (
+                        <li>
+                          <Link href={x.route}>
+                            <a className="site-page child">
+                              <i className={x.tips}></i> <span>{x.title}</span>
+                            </a>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ) : (
+                  ""
+                )}
+              </div>
+            );
+          })}
+          {/*
           <div className="menus_item">
             <a className="site-page" href="/">
               <i className="fa-fw fas fa-home"></i> <span>首頁</span>
@@ -132,6 +172,7 @@ const Index = () => {
               <i className="fa-fw fas fa-thumbs-up"></i> <span>示例</span>
             </a>
           </div>
+        */}
         </div>
         <div id="toggle-menu">
           <a className="site-page">

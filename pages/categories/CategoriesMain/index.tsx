@@ -1,6 +1,10 @@
 import PageAsideContent from "./../../../components/PageAsideContent";
+import Link from "next/link";
 
-const Index = () => {
+const Index = ({ appStore }) => {
+  let { categoriesList = [] } = appStore;
+  console.log("categoriesList", categoriesList);
+  // categoriesList = categoriesList.filter(x=>x.is_banner)
   return (
     <main className="layout" id="content-inner">
       <div id="page">
@@ -10,51 +14,19 @@ const Index = () => {
           </div>
           <div>
             <ul className="category-list">
-              <li className="category-list-item">
-                <a className="category-list-link" href="/categories/Demo/">
-                  Demo
-                </a>
-                <span className="category-list-count">5</span>
-              </li>
-              <li className="category-list-item">
-                <a
-                  className="category-list-link"
-                  href="/categories/Docs%E6%96%87%E6%AA%94/"
-                >
-                  Docs文檔
-                </a>
-                <span className="category-list-count">7</span>
-              </li>
-              <li className="category-list-item">
-                <a className="category-list-link" href="/categories/Markdown/">
-                  Markdown
-                </a>
-                <span className="category-list-count">1</span>
-              </li>
-              <li className="category-list-item">
-                <a className="category-list-link" href="/categories/Thx/">
-                  Thx
-                </a>
-                <span className="category-list-count">1</span>
-              </li>
-              <li className="category-list-item">
-                <a
-                  className="category-list-link"
-                  href="/categories/%E5%90%88%E9%9B%86/"
-                >
-                  合集
-                </a>
-                <span className="category-list-count">1</span>
-              </li>
-              <li className="category-list-item">
-                <a
-                  className="category-list-link"
-                  href="/categories/%E9%80%B2%E9%9A%8E%E6%95%99%E7%A8%8B/"
-                >
-                  進階教程
-                </a>
-                <span className="category-list-count">3</span>
-              </li>
+              {categoriesList.map((item) => (
+                <li className="category-list-item">
+                  <Link
+                    href={{
+                      pathname: "/categories/[id]",
+                      query: { id: item.id },
+                    }}
+                  >
+                    <a className="category-list-link">{item.title}</a>
+                  </Link>
+                  <span className="category-list-count">5</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState } from "react";
 
 import PageNav from "./../../../components/PageNav";
 
-const Index = () => {
+const Index = ({appStore}) => {
   return (
     <header
       className="post-bg"
@@ -12,7 +12,7 @@ const Index = () => {
           "url(https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png)",
       }}
     >
-      <PageNav />
+      <PageNav appStore={appStore}/>
       <div id="post-info">
         <h1 className="post-title">
           Butterfly 安裝文檔(一) 快速開始

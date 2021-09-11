@@ -3,13 +3,14 @@ import BaseHead from "./../../components/BaseHead";
 import PageHeader from "./PageHeader";
 import PageMain from "./PageMain";
 import PageFooter from "././../../components/PageFooter";
+import { ajax_column_query } from "./../api";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ appStore }) => {
   return (
     <div className="z_page_wrap">
       <BaseHead />
       <div className="page" id="body-wrap">
-        <PageHeader />
+        <PageHeader appStore={appStore} />
         <PageMain />
         <PageFooter />
       </div>
@@ -31,11 +32,13 @@ export default Home;
 //   };
 // }
 
-// export async function getServerSideProps(context: any) {
-//   console.log("getServerSideProps", context);
-//   return {
-//     props: {
-//       // props for your component
-//     },
-//   };
-// }
+export async function getServerSideProps(context: any) {
+  let column = await ajax_column_query({});
+  return {
+    props: {
+      appStore: {
+        column,
+      },
+    },
+  };
+}
