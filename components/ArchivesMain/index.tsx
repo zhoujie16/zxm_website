@@ -1,8 +1,8 @@
-import PageAsideContent from "./../../../components/PageAsideContent";
+import PageAsideContent from "./../PageAsideContent";
 import { connect } from "react-redux";
 import ArticleSortItem from "./ArticleSortItem";
 import React from "react";
-import PagePagination from "../../../components/PagePagination";
+import PagePagination from "./../PagePagination";
 
 const Index = (props: any) => {
   let mainArticleData: any = { item: [] };

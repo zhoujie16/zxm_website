@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import BaseHead from "./../../components/BaseHead";
 import PageFooter from "./../../components/PageFooter";
-import ArchivesMain from "./ArchivesMain";
-import ArchivesHeader from "./ArchivesHeader";
+import ArchivesMain from "components/ArchivesMain";
+import ArchivesHeader from "components/ArchivesHeader";
 import { ajax_article_query } from "./../../api";
 import { wrapper } from "../../store";
 import { getPageCommonData } from "../../utils";
