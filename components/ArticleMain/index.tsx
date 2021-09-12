@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from "react";
-import PageAsideContent from "./../../../components/PageAsideContent";
+import PageAsideContent from "./../PageAsideContent";
 import ArticleCopyright from "./../ArticleCopyright";
 import ArticleTagShare from "./../ArticleTagShare";
 import ArticlePostReward from "./../ArticlePostReward";

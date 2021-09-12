@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import BaseHead from "./../../components/BaseHead";
-import ArticleHeader from "./ArticleHeader";
-import ArticleMain from "./ArticleMain";
+import ArticleHeader from "./../../components/ArticleHeader";
+import ArticleMain from "./../../components/ArticleMain";
 import PageFooter from "././../../components/PageFooter";
 import { wrapper } from "../../store";
 import { getPageCommonData } from "../../utils";

@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState } from "react";
 import { connect } from "react-redux";
-import PageNav from "./../../../components/PageNav";
+import PageNav from "./../PageNav";
 import moment from "moment";
 
 const Index = (props: any) => {
