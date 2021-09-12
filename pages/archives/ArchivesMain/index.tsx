@@ -1,6 +1,8 @@
 import PageAsideContent from "./../../../components/PageAsideContent";
 import { connect } from "react-redux";
 import ArticleSortItem from "./ArticleSortItem";
+import React from "react";
+import PagePagination from "../../../components/PagePagination";
 
 const Index = (props: any) => {
   let mainArticleData: any = {};
@@ -350,17 +352,7 @@ const Index = (props: any) => {
           </div>
           */}
         </div>
-        <nav id="pagination">
-          <div className="pagination">
-            <span className="page-number current">1</span>
-            <a className="page-number" href="/archives/page/2/">
-              2
-            </a>
-            <a className="extend next" rel="next" href="/archives/page/2/">
-              <i className="fas fa-chevron-right fa-fw"></i>
-            </a>
-          </div>
-        </nav>
+        <PagePagination />
       </div>
       <PageAsideContent />
     </main>

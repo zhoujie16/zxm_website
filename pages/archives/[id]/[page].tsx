@@ -1,24 +1,12 @@
 import type { NextPage } from "next";
-import BaseHead from "./../../components/BaseHead";
-import PageFooter from "./../../components/PageFooter";
-import ArchivesMain from "./ArchivesMain";
-import ArchivesHeader from "./ArchivesHeader";
-import { ajax_article_query } from "./../api";
-import { wrapper } from "../../store";
-import { getPageCommonData } from "../../utils";
+import { ajax_article_query } from "./../../api";
+import { wrapper } from "../../../store";
+import { getPageCommonData } from "../../../utils";
 import { connect } from "react-redux";
+import Index from "./../index";
 
 const Home: NextPage = () => {
-  return (
-    <div className="z_page_wrap">
-      <BaseHead />
-      <div className="page" id="body-wrap">
-        <ArchivesHeader />
-        <ArchivesMain />
-        <PageFooter />
-      </div>
-    </div>
-  );
+  return <Index />;
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
@@ -26,11 +14,12 @@ export const getServerSideProps = wrapper.getServerSideProps(
     ({ req, res, ...etc }): any => {
       //
       let { params } = etc;
+      console.log(params);
       let currentPage = 1;
+      let column_id = 0;
       if (params && params.page) {
         currentPage = Number(params.page);
       }
-      let column_id = 0;
       if (params && params.id) {
         column_id = Number(params.id);
       }

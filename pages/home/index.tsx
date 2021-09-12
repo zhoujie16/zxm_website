@@ -24,18 +24,19 @@ const Home: NextPage = (props) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     ({ req, res, ...etc }): any => {
+      //
       let { params } = etc;
       let currentPage = 1;
       if (params && params.page) {
         currentPage = Number(params.page);
       }
+      //
       let callback = async () => {
         await getPageCommonData(store);
         let mainArticleData: any = await ajax_article_query({
           pageSize: 10,
           currentPage,
         });
-        console.log("mainArticleData", mainArticleData);
         store.dispatch({
           type: "Get_mainArticleData",
           payload: mainArticleData,
