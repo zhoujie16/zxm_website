@@ -8,13 +8,18 @@ export const initState = {
   mainCategoriesList: [],
   mainArticleData: {}, //归档也列表数据
   mainArticleDetail: {}, // 文章详细的数据
+  pagePaginationData: {
+    totalCount: 0,
+    pageSize: 0,
+    curPage: 0,
+    baseHref: "/home/page/",
+  }, // 分页数据
 };
 
 // create your reducer
 const reducer = (state = initState, action: AnyAction) => {
   switch (action.type) {
     case HYDRATE:
-      console.log("HYDRATE REDUCE");
       return { ...state, ...action.payload };
     case "Get_Column_List":
       return {
@@ -35,6 +40,11 @@ const reducer = (state = initState, action: AnyAction) => {
       return {
         ...state,
         mainArticleDetail: action.payload,
+      };
+    case "Set_pagePaginationData":
+      return {
+        ...state,
+        pagePaginationData: action.payload,
       };
     default:
       return state;

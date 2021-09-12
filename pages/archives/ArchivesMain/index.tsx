@@ -6,7 +6,7 @@ const Index = (props: any) => {
   let mainArticleData: any = {};
   mainArticleData = props.mainArticleData;
   let total = mainArticleData.total;
-  console.log("mainArticleData", mainArticleData);
+  // console.log("mainArticleData", mainArticleData);
   return (
     <main className="layout" id="content-inner">
       <div id="archive">

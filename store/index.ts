@@ -8,4 +8,4 @@ import reducer from "./reducers";
 const makeStore = (context: Context) => createStore(reducer);
 
 // export an assembled wrapper
-export const wrapper = createWrapper<Store>(makeStore, { debug: true });
+export const wrapper = createWrapper<Store>(makeStore, { debug: false });

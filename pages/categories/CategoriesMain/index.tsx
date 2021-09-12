@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const Index = (props: any) => {
   let { mainCategoriesList } = props;
-  console.log("categoriesList", mainCategoriesList);
+  // console.log("categoriesList", mainCategoriesList);
   return (
     <main className="layout" id="content-inner">
       <div id="page">

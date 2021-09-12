@@ -1,12 +1,13 @@
 import { connect } from "react-redux";
 import PageAsideContent from "./../../../components/PageAsideContent";
 import RecentPostItem from "./RecentPostItem";
+import PagePagination from "./../../../components/PagePagination";
 
 const Index = (props: any) => {
   let mainArticleData: any = {};
   mainArticleData = props.mainArticleData;
   let total = mainArticleData.total;
-  console.log("mainArticleData", mainArticleData);
+  // console.log("mainArticleData", mainArticleData);
   return (
     <main className="layout" id="content-inner">
       <div className="recent-posts" id="recent-posts">
@@ -234,17 +235,7 @@ const Index = (props: any) => {
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
          */}
-        <nav id="pagination">
-          <div className="pagination">
-            <span className="page-number current">1</span>
-            <a className="page-number" href="/page/2/#content-inner">
-              2
-            </a>
-            <a className="extend next" rel="next" href="/page/2/#content-inner">
-              <i className="fas fa-chevron-right fa-fw"></i>
-            </a>
-          </div>
-        </nav>
+        <PagePagination />
       </div>
       <PageAsideContent />
     </main>

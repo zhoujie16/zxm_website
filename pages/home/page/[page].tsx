@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
-import BaseHead from "./../../components/BaseHead";
-import PageHeader from "./PageHeader";
-import PageMain from "./PageMain";
-import PageFooter from "././../../components/PageFooter";
-import { wrapper } from "./../../store";
+import BaseHead from "./../../../components/BaseHead";
+import PageHeader from "./../PageHeader";
+import PageMain from "./../PageMain";
+import PageFooter from "././../../../components/PageFooter";
+import { wrapper } from "./../../../store";
 import { connect } from "react-redux";
-import { getPageCommonData } from "./../../utils";
-import { ajax_article_query } from "../api";
+import { getPageCommonData } from "./../../../utils";
+import { ajax_article_query } from "./../../api";
 
 const Home: NextPage = (props) => {
   return (
