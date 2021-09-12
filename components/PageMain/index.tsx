@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import PageAsideContent from "./../../../components/PageAsideContent";
+import PageAsideContent from "components/PageAsideContent";
 import RecentPostItem from "./RecentPostItem";
-import PagePagination from "./../../../components/PagePagination";
+import PagePagination from "components/PagePagination";
 
 const Index = (props: any) => {
   let mainArticleData: any = { items: [] };
