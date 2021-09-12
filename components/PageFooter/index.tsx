@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const Index = () => {
   return (
     <footer
@@ -8,8 +10,10 @@ const Index = () => {
       }}
     >
       <div id="footer-wrap">
-        <div className="copyright">&copy;2019 - 2021 By Jerry</div>
-        <div className="framework-info">
+        <div className="copyright">
+          &copy;2016 - {moment().format("YYYY")} By 周小米
+        </div>
+        {/* <div className="framework-info">
           <span>框架</span>
           <a
             target="_blank"
@@ -27,7 +31,7 @@ const Index = () => {
           >
             Butterfly
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

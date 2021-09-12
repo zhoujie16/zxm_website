@@ -88,32 +88,45 @@ const Index = (props: any) => {
     <nav id="pagination">
       <div className="pagination">
         {curPage != 1 ? (
-          <Link href={{ pathname: baseHref + (Number(curPage) + -1) }}>
-            <a className="extend prev" rel="prev">
-              <i className="fas fa-chevron-left fa-fw"></i>
-            </a>
-          </Link>
+          // <Link href={{ pathname: baseHref + (Number(curPage) + -1) }}>
+          <a
+            href={baseHref + (Number(curPage) + -1) + "#content-inner"}
+            className="extend prev"
+            rel="prev"
+          >
+            <i className="fas fa-chevron-left fa-fw"></i>
+          </a>
         ) : (
+          // </Link>
           ""
         )}
 
         {paginationCompData.map((item: any) =>
           item.curType ? (
-            <Link href={{ pathname: item.pageHref }}>
-              <a className={item.pageClass}>{item.pageNumber}</a>
-            </Link>
+            // <Link href={{ pathname: item.pageHref }}>
+            <a
+              href={item.pageHref + "#content-inner"}
+              className={item.pageClass}
+            >
+              {item.pageNumber}
+            </a>
           ) : (
+            // </Link>
             <span className="space">…</span>
           )
         )}
 
         {curPage != paginationNum ? (
-          <Link href={{ pathname: baseHref + (Number(curPage) + 1) }}>
-            <a className="extend next" rel="next">
-              <i className="fas fa-chevron-right fa-fw"></i>
-            </a>
-          </Link>
+          // <Link href={{ pathname: baseHref + (Number(curPage) + 1) }}>
+          <a
+            href={baseHref + (Number(curPage) + 1) + "#content-inner"}
+            className="extend next"
+            rel="next"
+          >
+            <i className="fas fa-chevron-right fa-fw"></i>
+          </a>
         ) : (
+          // </Link>
           ""
         )}
       </div>

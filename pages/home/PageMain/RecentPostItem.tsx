@@ -8,10 +8,11 @@ const Index = (props: any) => {
   let title = itemInfo.title;
   let timeStr = moment(Number(itemInfo.release_time)).format("YYYY-MM-DD");
   let content_rich = itemInfo.content_rich;
+  let herfUrl = `/article/${itemInfo.id}`;
   return (
     <div className="recent-post-item">
       <div className={postClass}>
-        <a href="/posts/21cfbf15/" title={title}>
+        <a href={herfUrl} title={title}>
           <img
             className="post_bg"
             src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
@@ -22,7 +23,7 @@ const Index = (props: any) => {
         </a>
       </div>
       <div className="recent-post-info">
-        <a className="article-title" href="/posts/21cfbf15/" title={title}>
+        <a className="article-title" href={herfUrl} title={title}>
           {title}
         </a>
         <div className="article-meta-wrap">

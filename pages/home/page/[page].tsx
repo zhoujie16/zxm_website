@@ -1,24 +1,12 @@
 import type { NextPage } from "next";
-import BaseHead from "./../../../components/BaseHead";
-import PageHeader from "./../PageHeader";
-import PageMain from "./../PageMain";
-import PageFooter from "././../../../components/PageFooter";
 import { wrapper } from "./../../../store";
 import { connect } from "react-redux";
 import { getPageCommonData } from "./../../../utils";
 import { ajax_article_query } from "./../../api";
+import Home from "./../index";
 
-const Home: NextPage = (props) => {
-  return (
-    <div className="z_page_wrap">
-      <BaseHead />
-      <div className="page" id="body-wrap">
-        <PageHeader />
-        <PageMain />
-        <PageFooter />
-      </div>
-    </div>
-  );
+const Index = () => {
+  return <Home />;
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
@@ -60,4 +48,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
     }
 );
 
-export default connect((state) => state)(Home);
+export default connect((state) => state)(Index);

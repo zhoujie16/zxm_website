@@ -7,18 +7,10 @@ import { ajax_column_query, ajax_column_queryList } from "./../api";
 import { wrapper } from "../../store";
 import { getPageCommonData } from "../../utils";
 import { connect } from "react-redux";
+import MyPage from "./index";
 
 const Home: NextPage = () => {
-  return (
-    <div className="z_page_wrap">
-      <BaseHead />
-      <div className="page" id="body-wrap">
-        <CategoriesHeader />
-        <CategoriesMain />
-        <PageFooter />
-      </div>
-    </div>
-  );
+  return <MyPage />;
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
