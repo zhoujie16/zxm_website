@@ -5,7 +5,7 @@ const Index = (props: any) => {
   let { mainCategoriesList, pageCategoriesData } = props;
   let { parent_id } = pageCategoriesData;
   let pageCategoriesList = mainCategoriesList.filter(
-    (x: any) => x.parent_id == Number(parent_id)
+    (x: any) => x.parent_id == Number(parent_id) && x.is_banner == false
   );
 
   let categoriesListCount = pageCategoriesList.length;

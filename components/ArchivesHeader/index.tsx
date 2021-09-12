@@ -12,7 +12,7 @@ const Index = () => {
     >
       <PageNav />
       <div id="page-site-info">
-        <h1 id="site-title">分類</h1>
+        <h1 id="site-title">归档</h1>
       </div>
     </header>
   );

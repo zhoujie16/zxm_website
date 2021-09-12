@@ -16,35 +16,43 @@ const Index = (props: any) => {
 
   return (
     <div className="article-sort-item">
-      <Link
+      {/* <Link
         href={{
           pathname: "/article/[id]",
           query: { id: id },
         }}
+      > */}
+      <a
+        className="article-sort-item-img"
+        title={title}
+        href={`/article/${id}`}
       >
-        <a className="article-sort-item-img" title={title}>
-          <img
-            src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
-            alt={title}
-            // onerror='this.onerror=null,this.src="/img/404.jpg"'
-          />
-        </a>
-      </Link>
+        <img
+          src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
+          alt={title}
+          // onerror='this.onerror=null,this.src="/img/404.jpg"'
+        />
+      </a>
+      {/* </Link> */}
       <div className="article-sort-item-info">
         <div className="article-sort-item-time">
           <i className="far fa-calendar-alt"></i>
           <time className="post-meta-date-created">{timeStr}</time>
         </div>
-        <Link
+        {/* <Link
           href={{
             pathname: "/article/[id]",
             query: { id: id },
           }}
+        > */}
+        <a
+          className="article-sort-item-title"
+          title={title}
+          href={`/article/${id}`}
         >
-          <a className="article-sort-item-title" title={title}>
-            {title}
-          </a>
-        </Link>
+          {title}
+        </a>
+        {/* </Link> */}
       </div>
     </div>
   );
