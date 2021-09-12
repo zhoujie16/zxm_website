@@ -1,4 +1,4 @@
-import PageNav from "./../../../components/PageNav";
+import PageNav from "./../PageNav";
 
 const Index = () => {
   return (

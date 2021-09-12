@@ -1,4 +1,4 @@
-import PageAsideContent from "./../../../components/PageAsideContent";
+import PageAsideContent from "./../PageAsideContent";
 import { connect } from "react-redux";
 
 const Index = (props: any) => {
