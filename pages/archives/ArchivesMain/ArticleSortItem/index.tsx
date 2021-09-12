@@ -3,15 +3,23 @@ import Link from "next/link";
 
 const Index = (props: any) => {
   let { itemInfo } = props;
-  let title = itemInfo.title;
-  let timeStr = moment(Number(itemInfo.release_time)).format("YYYY-MM-DD");
+  let title = "";
+  let timeStr = "";
+  let id = 0;
+  try {
+    title = itemInfo.title;
+    timeStr = moment(Number(itemInfo.release_time)).format("YYYY-MM-DD");
+    id = itemInfo.id;
+  } catch (error) {
+    console.log(error);
+  }
 
   return (
     <div className="article-sort-item">
       <Link
         href={{
           pathname: "/article/[id]",
-          query: { id: itemInfo.id },
+          query: { id: id },
         }}
       >
         <a className="article-sort-item-img" title={title}>
@@ -30,7 +38,7 @@ const Index = (props: any) => {
         <Link
           href={{
             pathname: "/article/[id]",
-            query: { id: itemInfo.id },
+            query: { id: id },
           }}
         >
           <a className="article-sort-item-title" title={title}>

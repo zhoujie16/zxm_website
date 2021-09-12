@@ -5,9 +5,15 @@ import React from "react";
 import PagePagination from "../../../components/PagePagination";
 
 const Index = (props: any) => {
-  let mainArticleData: any = {};
-  mainArticleData = props.mainArticleData;
-  let total = mainArticleData.total;
+  let mainArticleData: any = { item: [] };
+  let total = 0;
+  try {
+    mainArticleData = props.mainArticleData;
+    total = mainArticleData.total;
+  } catch (error) {
+    console.log(error);
+  }
+
   // console.log("mainArticleData", mainArticleData);
   return (
     <main className="layout" id="content-inner">

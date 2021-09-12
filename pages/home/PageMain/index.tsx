@@ -4,10 +4,13 @@ import RecentPostItem from "./RecentPostItem";
 import PagePagination from "./../../../components/PagePagination";
 
 const Index = (props: any) => {
-  let mainArticleData: any = {};
-  mainArticleData = props.mainArticleData;
-  let total = mainArticleData.total;
-  // console.log("mainArticleData", mainArticleData);
+  let mainArticleData: any = { items: [] };
+  try {
+    mainArticleData = props.mainArticleData;
+  } catch (error) {
+    console.log(error);
+  }
+
   return (
     <main className="layout" id="content-inner">
       <div className="recent-posts" id="recent-posts">

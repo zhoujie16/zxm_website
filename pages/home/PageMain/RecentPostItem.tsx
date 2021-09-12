@@ -5,10 +5,19 @@ const Index = (props: any) => {
   let postClass = `post_cover${
     curIndex % 2 === 0 ? " left_radius" : " right_radius"
   }`;
-  let title = itemInfo.title;
-  let timeStr = moment(Number(itemInfo.release_time)).format("YYYY-MM-DD");
-  let content_rich = itemInfo.content_rich;
-  let herfUrl = `/article/${itemInfo.id}`;
+  let title = "";
+  let timeStr = "";
+  let content_rich = "";
+  let herfUrl = ``;
+  try {
+    title = itemInfo?.title;
+    timeStr = moment(Number(itemInfo.release_time)).format("YYYY-MM-DD");
+    content_rich = itemInfo.content_rich;
+    herfUrl = `/article/${itemInfo.id}`;
+  } catch (error) {
+    console.log(error);
+  }
+
   return (
     <div className="recent-post-item">
       <div className={postClass}>

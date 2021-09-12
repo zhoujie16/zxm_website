@@ -4,11 +4,16 @@ import PageNav from "./../../../components/PageNav";
 import moment from "moment";
 
 const Index = (props: any) => {
-  let { mainArticleDetail } = props;
-  let title = mainArticleDetail.title;
-  let time = moment(Number(mainArticleDetail.release_time)).format(
-    "YYYY-MM-DD"
-  );
+  let mainArticleDetail: any = { title: "", release_time: 0 };
+  let title = "";
+  let time = "";
+  try {
+    mainArticleDetail = props.mainArticleDetail;
+    title = mainArticleDetail.title;
+    time = moment(Number(mainArticleDetail.release_time)).format("YYYY-MM-DD");
+  } catch (error) {
+    console.log(error);
+  }
   return (
     <header
       className="post-bg"
