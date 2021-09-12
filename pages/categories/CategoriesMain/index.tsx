@@ -32,7 +32,7 @@ const Index = (props: any) => {
           <div>
             <ul className="category-list">
               {pageCategoriesList.map((item: any) => (
-                <li className="category-list-item">
+                <li className="category-list-item" key={item.id}>
                   <a
                     className="category-list-link"
                     onClick={() => pushPage(item)}

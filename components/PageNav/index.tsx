@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { connect } from "react-redux";
+import { getCategoriesTreeList } from "./../../utils";
 
 const Index = (props: any) => {
-  let columnList = props.columnList[0].children;
+  let columnList = getCategoriesTreeList(props.mainCategoriesList);
   return (
     <nav id="nav">
       <span id="blog_name">
@@ -17,31 +18,31 @@ const Index = (props: any) => {
           </a>
         </div>
         <div className="menus_items">
-          {columnList.map((item) => {
+          {columnList.map((item: any) => {
             return (
-              <div className="menus_item">
-                <Link href={item.route}>
-                  <a className="site-page" rel="external nofollow noreferrer">
-                    <i className={item.tips}></i>
-                    <span>{item.title}</span>
-                    {item.children ? (
-                      <i className="fas fa-chevron-down expand"></i>
-                    ) : (
-                      ""
-                    )}
-                  </a>
-                </Link>
+              <div className="menus_item" key={item.id}>
+                <a
+                  className="site-page"
+                  rel="external nofollow noreferrer"
+                  href={item.route}
+                >
+                  <i className={item.tips}></i>
+                  <span>{item.title}</span>
+                  {item.children ? (
+                    <i className="fas fa-chevron-down expand"></i>
+                  ) : (
+                    ""
+                  )}
+                </a>
 
                 {item.children ? (
                   <ul className="menus_item_child">
-                    {item.children.map((x) => {
+                    {item.children.map((x: any) => {
                       return (
-                        <li>
-                          <Link href={x.route}>
-                            <a className="site-page child">
-                              <i className={x.tips}></i> <span>{x.title}</span>
-                            </a>
-                          </Link>
+                        <li key={x.id}>
+                          <a className="site-page child" href={x.route}>
+                            <i className={x.tips}></i> <span>{x.title}</span>
+                          </a>
                         </li>
                       );
                     })}

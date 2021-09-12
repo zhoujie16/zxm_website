@@ -15,7 +15,7 @@ const Index = (props: any) => {
         <div className="article-sort-title">文章总览 - {total}</div>
         <div className="article-sort">
           {mainArticleData.items.map((x: any) => (
-            <ArticleSortItem itemInfo={x} />
+            <ArticleSortItem itemInfo={x} key={x.id} />
           ))}
           {/*
           <div className="article-sort-item year">2021</div>

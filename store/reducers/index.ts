@@ -1,11 +1,9 @@
 import { actionTypes } from "./../actionTypes";
-
-import { createStore, AnyAction, Store } from "redux";
-import { createWrapper, Context, HYDRATE } from "next-redux-wrapper";
+import { AnyAction } from "redux";
+import { HYDRATE } from "next-redux-wrapper";
 
 export const initState = {
-  columnList: [],
-  mainCategoriesList: [],
+  mainCategoriesList: [], // 分类数据
   mainArticleData: {}, //归档也列表数据
   mainArticleDetail: {}, // 文章详细的数据
   pagePaginationData: {
@@ -24,11 +22,6 @@ const reducer = (state = initState, action: AnyAction) => {
   switch (action.type) {
     case HYDRATE:
       return { ...state, ...action.payload };
-    case "Get_Column_List":
-      return {
-        ...state,
-        columnList: action.payload,
-      };
     case "Get_mainCategoriesList":
       return {
         ...state,

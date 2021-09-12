@@ -14,7 +14,7 @@ const instance = axios.create({
 });
 
 // 异常处理程序
-const errorHandler = (error) => {
+const errorHandler = (error: any) => {
   console.log("errorHandler", error);
 };
 

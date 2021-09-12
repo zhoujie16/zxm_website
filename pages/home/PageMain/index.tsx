@@ -12,7 +12,7 @@ const Index = (props: any) => {
     <main className="layout" id="content-inner">
       <div className="recent-posts" id="recent-posts">
         {mainArticleData.items.map((x: any, i: number) => (
-          <RecentPostItem itemInfo={x} curIndex={i} />
+          <RecentPostItem itemInfo={x} curIndex={i} key={x.id} />
         ))}
 
         {/*

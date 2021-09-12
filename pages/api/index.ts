@@ -8,22 +8,15 @@ import axios from "./fetch";
 
 // 测试
 export const ajax_test = () => axios.get(`/`, {});
-// 首页数据 api/website/web/queryHome
 
-// 查询分类
-export const ajax_column_query = () => axios.post(`/website/column/query`, {});
-
+// 分类数据
 export const ajax_column_queryWithClient = () =>
   axios.post(`/website/column/queryWithClient`, {});
 
-// /website/column/queryList
-export const ajax_column_queryList = () =>
-  axios.post(`/website/column/queryList`, {});
-
 // 查询文章详细 website/article/queryDetail
-export const ajax_article_queryDetail = (params) =>
+export const ajax_article_queryDetail = (params: any) =>
   axios.post(`/website/article/queryDetail`, params);
 
 // 查询文章列表 /website/article/query
-export const ajax_article_query = (params) =>
+export const ajax_article_query = (params: any) =>
   axios.post(`/website/article/query`, params);
