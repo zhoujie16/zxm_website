@@ -3,7 +3,7 @@ import { ajax_article_query } from "./../../api";
 import { wrapper } from "../../../store";
 import { getPageCommonData } from "../../../utils";
 import { connect } from "react-redux";
-import Index from "./../index";
+import Index from "./index";
 
 const Home: NextPage = () => {
   return <Index />;
@@ -41,7 +41,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
             totalCount: mainArticleData.total,
             curPage: mainArticleData.currentPage,
             pageSize: mainArticleData.pageSize,
-            baseHref: "/home/page/",
+            baseHref: `/archives/${column_id}/`,
           },
         });
       };

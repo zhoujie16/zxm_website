@@ -52,7 +52,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
             totalCount: mainArticleData.total,
             curPage: mainArticleData.currentPage,
             pageSize: mainArticleData.pageSize,
-            baseHref: "/home/page/",
+            baseHref: `/archives/${column_id}/`,
           },
         });
       };

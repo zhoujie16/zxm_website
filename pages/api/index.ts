@@ -10,7 +10,11 @@ import axios from "./fetch";
 export const ajax_test = () => axios.get(`/`, {});
 // 首页数据 api/website/web/queryHome
 
+// 查询分类
 export const ajax_column_query = () => axios.post(`/website/column/query`, {});
+
+export const ajax_column_queryWithClient = () =>
+  axios.post(`/website/column/queryWithClient`, {});
 
 // /website/column/queryList
 export const ajax_column_queryList = () =>
