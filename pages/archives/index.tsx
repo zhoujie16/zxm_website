@@ -3,7 +3,7 @@ import BaseHead from "./../../components/BaseHead";
 import PageFooter from "./../../components/PageFooter";
 import ArchivesMain from "./ArchivesMain";
 import ArchivesHeader from "./ArchivesHeader";
-import { ajax_article_query } from "./../api";
+import { ajax_article_query } from "./../../api";
 import { wrapper } from "../../store";
 import { getPageCommonData } from "../../utils";
 import { connect } from "react-redux";

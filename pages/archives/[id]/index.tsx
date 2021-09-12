@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { ajax_article_query } from "./../../api";
+import { ajax_article_query } from "./../../../api";
 import { wrapper } from "../../../store";
 import { getPageCommonData } from "../../../utils";
 import { connect } from "react-redux";

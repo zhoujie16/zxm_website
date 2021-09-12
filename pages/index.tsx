@@ -1,6 +1,6 @@
 import { wrapper } from "../store";
 import { getPageCommonData } from "../utils";
-import { ajax_article_query } from "./api";
+import { ajax_article_query } from "./../api";
 import Home from "./home";
 
 const Index = () => {

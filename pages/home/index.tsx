@@ -6,7 +6,7 @@ import PageFooter from "././../../components/PageFooter";
 import { wrapper } from "./../../store";
 import { connect } from "react-redux";
 import { getPageCommonData } from "./../../utils";
-import { ajax_article_query } from "../api";
+import { ajax_article_query } from "../../api";
 
 const Home: NextPage = (props) => {
   return (

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { wrapper } from "./../../../store";
 import { connect } from "react-redux";
 import { getPageCommonData } from "./../../../utils";
-import { ajax_article_query } from "./../../api";
+import { ajax_article_query } from "./../../../api";
 import Home from "./../index";
 
 const Index = () => {

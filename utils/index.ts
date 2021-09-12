@@ -1,4 +1,4 @@
-import { ajax_column_queryWithClient } from "./../pages/api";
+import { ajax_column_queryWithClient } from "./../api";
 
 export const getPageCommonData = async (store: any) => {
   let mainCategoriesList = await ajax_column_queryWithClient();

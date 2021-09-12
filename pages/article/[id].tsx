@@ -3,7 +3,7 @@ import BaseHead from "./../../components/BaseHead";
 import ArticleHeader from "./ArticleHeader";
 import ArticleMain from "./ArticleMain";
 import PageFooter from "././../../components/PageFooter";
-import { ajax_article_queryDetail } from "./../api";
+import { ajax_article_queryDetail } from "./../../api";
 import { wrapper } from "../../store";
 import { getPageCommonData } from "../../utils";
 import { connect } from "react-redux";
