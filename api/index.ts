@@ -19,4 +19,8 @@ export const ajax_article_queryDetail = (params: any) =>
 
 // 查询文章列表 /website/article/query
 export const ajax_article_query = (params: any) =>
-  axios.post(`/website/article/query`, params);
+  axios.post(`/website/article/queryByClient`, params);
+
+// 搜索
+export const ajax_article_queryWithWords = (params: any) =>
+  axios.post(`/website/article/queryWithWords`, params);

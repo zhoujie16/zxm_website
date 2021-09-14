@@ -1,7 +1,12 @@
 import React, { useEffect, useCallback, useState } from "react";
 import PageNav from "../PageNav";
+import { scrollToDest } from "./../../utils";
 
 const Index = () => {
+  const scrollDownInIndex = () => {
+    scrollToDest(document.getElementById("content-inner").offsetTop, 300);
+  };
+
   return (
     <header
       className="full_page"
@@ -37,7 +42,7 @@ const Index = () => {
           </a>
         </div> */}
       </div>
-      <div id="scroll-down">
+      <div id="scroll-down" onClick={scrollDownInIndex}>
         <i className="fas fa-angle-down scroll-down-effects"></i>
       </div>
     </header>

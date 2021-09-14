@@ -2,7 +2,7 @@ import Head from "next/head";
 const Index = () => {
   return (
     <Head>
-      <title>Create Next App</title>
+      <title>周小米的博客</title>
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
