@@ -19,12 +19,12 @@ const Index = (props: any) => {
           id="article-container"
           dangerouslySetInnerHTML={{ __html: content_rich }}
         ></article>
-        <ArticleCopyright />
-        <ArticleTagShare />
-        <ArticlePostReward />
-        <AdsWrap />
-        <ArticlePagination />
-        <ArticleRelatedPosts />
+        {/* <ArticleCopyright /> */}
+        {/* <ArticleTagShare /> */}
+        {/* <ArticlePostReward /> */}
+        {/* <AdsWrap /> */}
+        {/* <ArticlePagination /> */}
+        {/* <ArticleRelatedPosts /> */}
       </div>
       <PageAsideContent />
     </main>
