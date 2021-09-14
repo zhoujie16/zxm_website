@@ -17,8 +17,12 @@ const Index = (props: any) => {
     let devicetype = getDevicetype();
     setDYype(devicetype);
     setTimeout(() => {
-      scrollFn();
       setShowMobNav(true);
+      if (window.scrollFn) {
+        return;
+      }
+      window.scrollFn = true;
+      scrollFn();
     }, 1500);
   }, []);
 
@@ -58,7 +62,7 @@ const Index = (props: any) => {
             }}
           >
             <a className="site-page social-icon search">
-              <i className="fas fa-search fa-fw"></i> <span>搜尋</span>
+              <i className="fas fa-search fa-fw"></i> <span>搜索</span>
             </a>
           </div>
           <div className="menus_items">
