@@ -1,4 +1,5 @@
 import axios from "axios";
+import Config from "./../config";
 
 // 自定义扩展 header 请求头
 const getConfigHeaders = () => {
@@ -9,7 +10,7 @@ const getConfigHeaders = () => {
 
 // 创建 axios 实例
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:7001",
+  baseURL: Config.apiUrl,
   timeout: 1000 * 20,
 });
 

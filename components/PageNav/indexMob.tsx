@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getCategoriesTreeList } from "utils";
 import { connect } from "react-redux";
+import Config from "./../../config";
 
 const Index = (props: any) => {
   let columnList = props.mainCategoriesList;
@@ -19,6 +20,14 @@ const Index = (props: any) => {
       };
   let mClass = isOpen ? "open" : "";
   let maskClick = () => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.nav_menu_close`);
+    } catch (error) {
+      console.log(error);
+    }
     toggerClick(false);
   };
 

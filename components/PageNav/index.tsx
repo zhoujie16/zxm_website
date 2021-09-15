@@ -4,6 +4,7 @@ import { getCategoriesTreeList } from "./../../utils";
 import { scrollFn, getDevicetype } from "./../../utils";
 import PageNavMob from "./indexMob";
 import SearchPanel from "./../SearchPanel";
+import Config from "./../../config";
 
 const Index = (props: any) => {
   let columnList = props.mainCategoriesList;
@@ -34,6 +35,42 @@ const Index = (props: any) => {
   let [isOpen, setIsOpen] = useState(false);
   let [isOpenSearch, setIsOpenSearch] = useState(false);
 
+  let searchBtnClickFn = () => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.search_panel_open`);
+    } catch (error) {
+      console.log(error);
+    }
+    setIsOpenSearch(true);
+  };
+
+  let searchBtnCloseFn = () => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.search_panel_close`);
+    } catch (error) {
+      console.log(error);
+    }
+    setIsOpenSearch(false);
+  };
+
+  let toggleMenuClickFn = () => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.nav_menu_open`);
+    } catch (error) {
+      console.log(error);
+    }
+    setIsOpen(true);
+  };
+
   return (
     <>
       {showMobNav ? (
@@ -41,7 +78,7 @@ const Index = (props: any) => {
           <PageNavMob isOpen={isOpen} toggerClick={setIsOpen} />
           <SearchPanel
             isOpenSearch={isOpenSearch}
-            toggerClick={setIsOpenSearch}
+            toggerClick={searchBtnCloseFn}
           />
         </>
       ) : (
@@ -51,16 +88,11 @@ const Index = (props: any) => {
       <nav id="nav" className={nclass}>
         <span id="blog_name">
           <a id="site-name" href="/">
-            周小米的博客
+            {Config.blogName}
           </a>
         </span>
         <div id="menus">
-          <div
-            id="search-button"
-            onClick={() => {
-              setIsOpenSearch(true);
-            }}
-          >
+          <div id="search-button" onClick={searchBtnClickFn}>
             <a className="site-page social-icon search">
               <i className="fas fa-search fa-fw"></i> <span>搜索</span>
             </a>
@@ -98,12 +130,7 @@ const Index = (props: any) => {
               );
             })}
           </div>
-          <div
-            id="toggle-menu"
-            onClick={() => {
-              setIsOpen(true);
-            }}
-          >
+          <div id="toggle-menu" onClick={toggleMenuClickFn}>
             <a className="site-page">
               <i className="fas fa-bars fa-fw"></i>
             </a>

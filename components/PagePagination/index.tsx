@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import Config from "./../../config";
 
 const Index = (props: any) => {
   let { pagePaginationData } = props;
@@ -83,6 +84,18 @@ const Index = (props: any) => {
     paginationCompData = [...arr_l, ...arr_r];
   }
 
+  let paginationBtnClickFn = (key) => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.paginationbtn_click`, {
+        btn_text: key,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <nav id="pagination">
       <div className="pagination">
@@ -91,6 +104,7 @@ const Index = (props: any) => {
             href={baseHref + (Number(curPage) + -1)}
             className="extend prev"
             rel="prev"
+            onClick={() => paginationBtnClickFn("prev")}
           >
             <i className="fas fa-chevron-left fa-fw"></i>
           </a>
@@ -100,7 +114,11 @@ const Index = (props: any) => {
 
         {paginationCompData.map((item: any) =>
           item.curType ? (
-            <a href={item.pageHref} className={item.pageClass}>
+            <a
+              href={item.pageHref}
+              className={item.pageClass}
+              onClick={() => paginationBtnClickFn(item.pageNumber)}
+            >
               {item.pageNumber}
             </a>
           ) : (
@@ -113,6 +131,7 @@ const Index = (props: any) => {
             href={baseHref + (Number(curPage) + 1)}
             className="extend next"
             rel="next"
+            onClick={() => paginationBtnClickFn("next")}
           >
             <i className="fas fa-chevron-right fa-fw"></i>
           </a>

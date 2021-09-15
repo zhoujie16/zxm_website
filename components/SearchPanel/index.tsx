@@ -1,5 +1,6 @@
 import React from "react";
 import { ajax_article_queryWithWords } from "./../../api";
+import Config from "./../../config";
 
 class Index extends React.Component {
   state = {
@@ -21,9 +22,30 @@ class Index extends React.Component {
   searchActoin = async () => {
     let { searchWords } = this.state;
     if (searchWords) {
+      try {
+        let pathname = window.location.pathname;
+        let [x, b] = pathname.split("/");
+        b == "" ? (b = "home") : "";
+        window.spm(`${Config.blogCode}.${b}.search_panel_action`, {
+          words: searchWords,
+        });
+      } catch (error) {
+        console.log(error);
+      }
       const list = await ajax_article_queryWithWords({
         words: searchWords,
       });
+      try {
+        let pathname = window.location.pathname;
+        let [x, b] = pathname.split("/");
+        b == "" ? (b = "home") : "";
+        window.spm(`${Config.blogCode}.${b}.search_panel_action_success`, {
+          words: searchWords,
+          list_count: list.length,
+        });
+      } catch (error) {
+        console.log(error);
+      }
       this.setState({
         searchResList: list,
       });
@@ -36,6 +58,20 @@ class Index extends React.Component {
       searchResList: [],
     });
     this.props.toggerClick(false);
+  };
+
+  searchListBtnClickFn = (item) => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.search_panel_list_click`, {
+        item_title: item.title,
+        id: item.id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   componentDidMount() {}
@@ -81,6 +117,7 @@ class Index extends React.Component {
                       href={hrefUrl}
                       className="search-result-title"
                       data-pjax-state=""
+                      onClick={() => this.searchListBtnClickFn(x)}
                     >
                       {x.title}
                     </a>

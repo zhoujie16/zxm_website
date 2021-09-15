@@ -36,7 +36,7 @@ const Index = () => {
           </a>
         </div>
       </div>
-      <a
+      {/* <a
         className="button--animated"
         id="card-info-btn"
         target="_blank"
@@ -45,7 +45,7 @@ const Index = () => {
       >
         <i className="fab fa-github"></i>
         <span>Follow Me</span>
-      </a>
+      </a> */}
       {/* <div className="card-info-social-icons is-center">
         <a
           className="social-icon"
