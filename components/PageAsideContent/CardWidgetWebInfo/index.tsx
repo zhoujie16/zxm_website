@@ -9,7 +9,7 @@ const Index = () => {
       <div className="webinfo">
         <div className="webinfo-item">
           <div className="item-name">文章数目 :</div>
-          <div className="item-count">18</div>
+          <div className="item-count">2840</div>
         </div>
         <div className="webinfo-item">
           <div className="item-name">已运行时间 :</div>
@@ -18,7 +18,7 @@ const Index = () => {
             id="runtimeshow"
             data-publishdate="2019-11-13T00:00:00.000Z"
           >
-            1234天
+            2183天
           </div>
         </div>
         <div className="webinfo-item">
@@ -34,7 +34,7 @@ const Index = () => {
         <div className="webinfo-item">
           <div className="item-name">本站总访问量 :</div>
           <div className="item-count" id="busuanzi_value_site_pv">
-            234123
+            534123
           </div>
         </div>
         <div className="webinfo-item">

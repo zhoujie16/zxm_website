@@ -1,10 +1,20 @@
-import { ajax_column_queryWithClient } from "./../api";
+import { ajax_column_queryWithClient, ajax_article_query } from "./../api";
 
 export const getPageCommonData = async (store: any) => {
+  // 分类
   let mainCategoriesList = await ajax_column_queryWithClient();
   store.dispatch({
     type: "Get_mainCategoriesList",
     payload: mainCategoriesList,
+  });
+  // 最近文章
+  let recentArticleData: any = await ajax_article_query({
+    pageSize: 6,
+    currentPage: 1,
+  });
+  store.dispatch({
+    type: "Get_recentArticleData",
+    payload: recentArticleData,
   });
 };
 

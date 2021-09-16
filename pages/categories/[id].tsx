@@ -12,7 +12,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     ({ req, res, ...etc }): any => {
       let { params } = etc;
-      console.log(params);
+      // console.log(params);
       let parent_id: any = 0;
       if (params && params.id) {
         parent_id = params.id;

@@ -20,7 +20,7 @@ const Index = () => {
         <div className="card-info-data-item is-center">
           <a href="/archives/">
             <div className="headline">文章</div>
-            <div className="length-num">18</div>
+            <div className="length-num">2840</div>
           </a>
         </div>
         {/* <div className="card-info-data-item is-center">
@@ -32,7 +32,7 @@ const Index = () => {
         <div className="card-info-data-item is-center">
           <a href="/categories/">
             <div className="headline">分类</div>
-            <div className="length-num">6</div>
+            <div className="length-num">99</div>
           </a>
         </div>
       </div>

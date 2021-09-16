@@ -15,7 +15,7 @@ export const ajax_column_queryWithClient = () =>
 
 // 查询文章详细 website/article/queryDetail
 export const ajax_article_queryDetail = (params: any) =>
-  axios.post(`/website/article/queryDetail`, params);
+  axios.post(`/website/article/queryDetailByClient`, params);
 
 // 查询文章列表 /website/article/query
 export const ajax_article_query = (params: any) =>

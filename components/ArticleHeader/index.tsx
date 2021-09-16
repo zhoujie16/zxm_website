@@ -8,7 +8,7 @@ const Index = (props: any) => {
   let title = "";
   let time = "";
   try {
-    mainArticleDetail = props.mainArticleDetail;
+    mainArticleDetail = props.mainArticleDetail.article;
     title = mainArticleDetail.title;
     time = moment(Number(mainArticleDetail.release_time)).format("YYYY-MM-DD");
   } catch (error) {

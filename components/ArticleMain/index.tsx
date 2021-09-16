@@ -10,7 +10,7 @@ import { connect } from "react-redux";
 
 const Index = (props: any) => {
   let { mainArticleDetail } = props;
-  let content_rich = mainArticleDetail.content_rich;
+  let content_rich = mainArticleDetail.article.content_rich;
   return (
     <main className="layout" id="content-inner">
       <div id="post">
@@ -23,8 +23,8 @@ const Index = (props: any) => {
         {/* <ArticleTagShare /> */}
         {/* <ArticlePostReward /> */}
         {/* <AdsWrap /> */}
-        {/* <ArticlePagination /> */}
-        {/* <ArticleRelatedPosts /> */}
+        <ArticlePagination />
+        <ArticleRelatedPosts />
       </div>
       <PageAsideContent />
     </main>

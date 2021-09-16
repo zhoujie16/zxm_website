@@ -14,7 +14,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     ({ req, res, ...etc }): any => {
       //
       let { params } = etc;
-      console.log(params);
+      // console.log(params);
       let currentPage = 1;
       let column_id = 0;
       if (params && params.page) {

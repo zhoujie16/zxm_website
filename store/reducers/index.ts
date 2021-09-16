@@ -6,6 +6,7 @@ export const initState = {
   mainCategoriesList: [], // 分类数据
   mainArticleData: {}, //归档也列表数据
   mainArticleDetail: {}, // 文章详细的数据
+  recentArticleData: {},
   pagePaginationData: {
     totalCount: 0,
     pageSize: 0,
@@ -31,6 +32,11 @@ const reducer = (state = initState, action: AnyAction) => {
       return {
         ...state,
         mainArticleData: action.payload,
+      };
+    case "Get_recentArticleData":
+      return {
+        ...state,
+        recentArticleData: action.payload,
       };
     case "Get_mainArticleDetail":
       return {

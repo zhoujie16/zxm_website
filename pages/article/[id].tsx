@@ -22,15 +22,21 @@ const Home: NextPage = () => {
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    (ctx: any): any => {
-      let callback = async () => {
-        await getPageCommonData(store);
-        let a = await ajax_article_queryDetail({ id: ctx.params.id });
-        store.dispatch({ type: "Get_mainArticleDetail", payload: a });
-      };
-      return callback();
-    }
+  (store) => (ctx: any): any => {
+    let callback = async () => {
+      await getPageCommonData(store);
+      let res: any = await ajax_article_queryDetail({
+        id: Number(ctx.params.id),
+      });
+      // console.log("1111", { id: ctx.params.id }, res);
+      let { article, prev, next, related } = res;
+      store.dispatch({
+        type: "Get_mainArticleDetail",
+        payload: res,
+      });
+    };
+    return callback();
+  }
 );
 
 export default connect((state) => state)(Home);

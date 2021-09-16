@@ -23,7 +23,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
           pageSize: 10,
           currentPage,
         });
-        console.log("mainArticleData", mainArticleData);
+        // console.log("mainArticleData", mainArticleData);
         store.dispatch({
           type: "Get_mainArticleData",
           payload: mainArticleData,

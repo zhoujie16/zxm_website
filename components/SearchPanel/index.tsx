@@ -9,7 +9,7 @@ class Index extends React.Component {
   };
 
   searchTextOnInput = (e: any) => {
-    console.log("searchTextOnInput");
+    // console.log("searchTextOnInput");
     this.setState({
       searchWords: e.target.value,
     });
