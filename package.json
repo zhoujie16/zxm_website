@@ -6,11 +6,14 @@
     "dev": "next dev -p 3100",
     "build": "next build",
     "start": "next start -p 3100",
-    "lint": "next lint"
+    "lint": "next lint",
+    "upload": "node ./utils/upload.ts"
   },
   "dependencies": {
     "axios": "^0.21.4",
     "es6-promise": "^4.2.8",
+    "gray-matter": "^4.0.3",
+    "marked": "^3.0.4",
     "moment": "^2.29.1",
     "next": "11.1.2",
     "next-redux-wrapper": "^7.0.4",
