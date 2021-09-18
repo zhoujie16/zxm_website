@@ -24,3 +24,8 @@ export const ajax_article_query = (params: any) =>
 // 搜索
 export const ajax_article_queryWithWords = (params: any) =>
   axios.post(`/website/article/queryWithWords`, params);
+
+// 保存我的博客
+
+export const ajax_article_saveMyBlog = (params: any) =>
+  axios.post(`/website/article/saveMyBlog`, params);

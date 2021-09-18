@@ -37,7 +37,6 @@ const Index = () => {
       />
       <link rel="stylesheet" href="/index.css" />
       <script src="/lib/spm.js"></script>
-      <script src="/index.js"></script>
     </Head>
   );
 };

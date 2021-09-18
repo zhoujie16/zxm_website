@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 const marked = require("marked");
+const axios = require("axios");
+const baseUrl = "http://127.0.0.1:7001";
 
 // 递归找到文件夹内所有md文件  输出数组
 async function filteFileMdList(fileDirPath) {
@@ -81,15 +83,32 @@ async function saveMd() {
     let mdContent = await filteMdToHtml(mdPath);
     let { contentHtml } = mdContent;
     if (contentHtml) {
-      let { title, date, categories } = mdContent.data;
-      console.log({
+      let { title, date, categories, password } = mdContent.data;
+      // console.log({
+      //   title,
+      //   date,
+      //   categories,
+      // contentHtml,
+      // });
+      if (password) {
+        contentHtml = "这里有东西被加密了，暂时无法查看哦";
+      }
+      let saveRes = await axios.post(`${baseUrl}/website/article/saveMyBlog`, {
         title,
         date,
         categories,
-        // contentHtml,
+        contentHtml,
       });
+      if (saveRes.data.stat.code == 0) {
+        console.log("保存结果", saveRes.data);
+      } else {
+        console.log("保存失败");
+        console.log(saveRes.data);
+      }
     }
   }
 }
 
 saveMd();
+
+// console.log(axios);
