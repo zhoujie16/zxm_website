@@ -39,7 +39,7 @@ const Index = (props: any) => {
                   >
                     {item.title}
                   </a>
-                  <span className="category-list-count">5</span>
+                  <span className="category-list-count">{item.total}</span>
                 </li>
               ))}
             </ul>
