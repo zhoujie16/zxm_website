@@ -7,49 +7,22 @@ const Index = () => {
       <div className="reward-main">
         <ul className="reward-all">
           <li className="reward-item">
-            <a
-              href="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/wechat.jpg"
-              rel="external nofollow noreferrer"
-              target="_blank"
-            >
-              <img
-                className="post-qr-code-img"
-                // src="/img/loading.gif"
-                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/wechat.jpg"
-                alt="微信"
-              />
-            </a>
+            <img
+              className="post-qr-code-img"
+              // src="/img/loading.gif"
+              src="https://i.loli.net/2021/09/19/6D1Ht4LRiyh2Vor.jpg"
+              alt="微信"
+            />
             <div className="post-qr-code-desc">微信</div>
           </li>
           <li className="reward-item">
-            <a
-              href="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipay.jpg"
-              rel="external nofollow noreferrer"
-              target="_blank"
-            >
-              <img
-                className="post-qr-code-img"
-                // src="/img/loading.gif"
-                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipay.jpg"
-                alt="支付寶"
-              />
-            </a>
-            <div className="post-qr-code-desc">支付寶</div>
-          </li>
-          <li className="reward-item">
-            <a
-              href="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipayhk.jpg"
-              rel="external nofollow noreferrer"
-              target="_blank"
-            >
-              <img
-                className="post-qr-code-img"
-                // src="/img/loading.gif"
-                src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/Photo/alipayhk.jpg"
-                alt="支付寶香港"
-              />
-            </a>
-            <div className="post-qr-code-desc">支付寶香港</div>
+            <img
+              className="post-qr-code-img"
+              // src="/img/loading.gif"
+              src="https://i.loli.net/2021/09/19/Dx584Xlf1enGbBo.jpg"
+              alt="支付宝"
+            />
+            <div className="post-qr-code-desc">支付宝</div>
           </li>
         </ul>
       </div>
