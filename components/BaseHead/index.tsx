@@ -37,6 +37,7 @@ const Index = () => {
       />
       <link rel="stylesheet" href="/index.css" />
       <script src="/lib/spm.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.5/dist/twikoo.all.min.js"></script>
     </Head>
   );
 };

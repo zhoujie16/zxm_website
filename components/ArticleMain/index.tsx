@@ -7,6 +7,7 @@ import AdsWrap from "./../AdsWrap";
 import ArticlePagination from "./../ArticlePagination";
 import ArticleRelatedPosts from "./../ArticleRelatedPosts";
 import { connect } from "react-redux";
+import ArticleComment from "../ArticleComment";
 
 const Index = (props: any) => {
   let { mainArticleDetail } = props;
@@ -21,10 +22,13 @@ const Index = (props: any) => {
         ></article>
         {/* <ArticleCopyright /> */}
         {/* <ArticleTagShare /> */}
-        {/* <ArticlePostReward /> */}
+        <ArticlePostReward />
         {/* <AdsWrap /> */}
+        <hr />
         <ArticlePagination />
         <ArticleRelatedPosts />
+        {/* <hr /> */}
+        {/* <ArticleComment /> */}
       </div>
       <PageAsideContent />
     </main>
