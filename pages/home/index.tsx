@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import BaseHead from "components/BaseHead";
-import PageHeader from "components/PageHeader";
-import PageMain from "components/PageMain";
-import PageFooter from "components/PageFooter";
+import BaseHead from "./../../components/BaseHead";
+import PageHeader from "./../../components/PageHeader";
+import PageMain from "./../../components/PageMain";
+import PageFooter from "./../../components/PageFooter";
 import { wrapper } from "./../../store";
 import { connect } from "react-redux";
 import { getPageCommonData } from "./../../utils";
