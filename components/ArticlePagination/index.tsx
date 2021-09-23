@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import Config from "../../config";
 import { getRandomNumImage } from "./../../utils";
 
 const Index = (props) => {
@@ -6,11 +7,44 @@ const Index = (props) => {
   let { prev, next } = mainArticleDetail;
   let pullClass = prev && next ? "" : " pull-full";
 
+  const onSpmPrev = (opt) => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b, id] = pathname.split("/");
+      let title = document.querySelector(".post-title").innerText;
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.pagination_btn_prev`, {
+        title: title,
+        id: id,
+        title_prec: opt.title,
+        id_prev: opt.id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const onSpmNext = (opt) => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b, id] = pathname.split("/");
+      let title = document.querySelector(".post-title").innerText;
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.pagination_btn_next`, {
+        title: title,
+        id: id,
+        title_next: opt.title,
+        id_next: opt.id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <nav className="pagination-post" id="pagination">
       {prev ? (
         <div className={`prev-post pull-left${pullClass}`}>
-          <a href={`/article/${prev.id}`}>
+          <a href={`/article/${prev.id}`} onClick={() => onSpmPrev(prev)}>
             <img
               className="prev-cover"
               // src="/img/loading.gif"
@@ -29,7 +63,10 @@ const Index = (props) => {
         ""
       )}
       {next ? (
-        <div className={`next-post pull-right${pullClass}`}>
+        <div
+          className={`next-post pull-right${pullClass}`}
+          onClick={() => onSpmNext(next)}
+        >
           <a href={`/article/${next.id}`}>
             <img
               className="next-cover"

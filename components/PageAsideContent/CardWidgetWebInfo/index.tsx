@@ -18,7 +18,7 @@ const Index = () => {
             id="runtimeshow"
             data-publishdate="2019-11-13T00:00:00.000Z"
           >
-            2183天
+            2189天
           </div>
         </div>
         <div className="webinfo-item">
@@ -44,7 +44,7 @@ const Index = () => {
             id="last-push-date"
             data-lastpushdate="2021-09-09T09:59:12.006Z"
           >
-            1天前
+            1周前
           </div>
         </div>
       </div>
