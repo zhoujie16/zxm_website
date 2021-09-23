@@ -3,10 +3,13 @@ import { connect } from "react-redux";
 
 const Index = (props: any) => {
   let { mainCategoriesList, pageCategoriesData } = props;
+  console.log(props);
   let { parent_id } = pageCategoriesData;
   let pageCategoriesList = mainCategoriesList.filter(
     (x: any) => x.parent_id == Number(parent_id) && x.is_banner == false
   );
+
+  let title_c = mainCategoriesList.find((x) => x.id == parent_id).title;
 
   let categoriesListCount = pageCategoriesList.length;
 
@@ -26,7 +29,7 @@ const Index = (props: any) => {
       <div id="page">
         <div className="category-lists">
           <div className="category-title is-center">
-            分类 -{" "}
+            {title_c} -{" "}
             <span className="category-amount">{categoriesListCount}</span>
           </div>
           <div>

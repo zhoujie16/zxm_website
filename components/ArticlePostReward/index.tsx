@@ -1,8 +1,24 @@
+import Config from "../../config";
+
 const Index = () => {
+  const onhover = () => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b, id] = pathname.split("/");
+      let title = document.querySelector(".post-title").innerText;
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.reward_btn_mouse_enter`, {
+        title,
+        id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="post-reward">
-      <div className="reward-button button--animated">
-        <i className="fas fa-qrcode"></i> 打賞
+      <div className="reward-button button--animated" onMouseEnter={onhover}>
+        <i className="fas fa-qrcode"></i> 打赏
       </div>
       <div className="reward-main">
         <ul className="reward-all">

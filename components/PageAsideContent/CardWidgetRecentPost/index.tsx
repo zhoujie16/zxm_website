@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { getRandomNumImage } from "./../../../utils";
 import moment from "moment";
+import Config from "../../../config";
 // 最近文章
 const Index = (props) => {
   let recentArticleData: any = { items: [] };
@@ -9,6 +10,19 @@ const Index = (props) => {
   } catch (error) {
     console.log(error);
   }
+  const spmFn = (opt) => {
+    try {
+      let pathname = window.location.pathname;
+      let [x, b] = pathname.split("/");
+      b == "" ? (b = "home") : "";
+      window.spm(`${Config.blogCode}.${b}.recent_btn_click`, {
+        title: opt.title,
+        id: opt.id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="card-widget card-recent-post">
       <div className="item-headline">
@@ -17,7 +31,7 @@ const Index = (props) => {
       </div>
       <div className="aside-list">
         {recentArticleData.items.map((item) => (
-          <div className="aside-list-item">
+          <div className="aside-list-item" onClick={() => spmFn(item)}>
             <a
               className="thumbnail"
               href={`/article/${item.id}`}
