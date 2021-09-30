@@ -1,5 +1,27 @@
 // 网站信息
-const Index = () => {
+import { connect } from "react-redux";
+import moment from "moment";
+
+const Index = (props) => {
+  let pageConfigData = props.pageConfigData;
+  let {
+    w_article_all_count,
+    w_column_all_count,
+    w_last_update_time,
+    w_pv_all_count,
+    w_uv_all_count,
+    w_website_create_time,
+  } = pageConfigData;
+  try {
+    w_website_create_time =
+      moment().diff(moment(Number(w_website_create_time)), "day") + "天";
+    w_last_update_time = moment(Number(w_last_update_time)).format(
+      "YYYY-MM-DD"
+    );
+  } catch (error) {
+    console.log(error);
+  }
+
   return (
     <div className="card-widget card-webinfo">
       <div className="item-headline">
@@ -9,7 +31,7 @@ const Index = () => {
       <div className="webinfo">
         <div className="webinfo-item">
           <div className="item-name">文章数目 :</div>
-          <div className="item-count">2840</div>
+          <div className="item-count">{w_article_all_count}</div>
         </div>
         <div className="webinfo-item">
           <div className="item-name">已运行时间 :</div>
@@ -18,23 +40,23 @@ const Index = () => {
             id="runtimeshow"
             data-publishdate="2019-11-13T00:00:00.000Z"
           >
-            2189天
+            {w_website_create_time}
           </div>
         </div>
-        <div className="webinfo-item">
+        {/* <div className="webinfo-item">
           <div className="item-name">本站总字数 :</div>
           <div className="item-count">50.6k</div>
-        </div>
+        </div> */}
         <div className="webinfo-item">
           <div className="item-name">本站访客数 :</div>
           <div className="item-count" id="busuanzi_value_site_uv">
-            120034
+            {w_uv_all_count}
           </div>
         </div>
         <div className="webinfo-item">
           <div className="item-name">本站总访问量 :</div>
           <div className="item-count" id="busuanzi_value_site_pv">
-            534123
+            {w_pv_all_count}
           </div>
         </div>
         <div className="webinfo-item">
@@ -44,7 +66,7 @@ const Index = () => {
             id="last-push-date"
             data-lastpushdate="2021-09-09T09:59:12.006Z"
           >
-            1周前
+            {w_last_update_time}
           </div>
         </div>
       </div>
@@ -52,4 +74,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default connect((state) => state)(Index);

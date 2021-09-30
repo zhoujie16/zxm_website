@@ -29,3 +29,7 @@ export const ajax_article_queryWithWords = (params: any) =>
 
 export const ajax_article_saveMyBlog = (params: any) =>
   axios.post(`/website/article/saveMyBlog`, params);
+
+// 查询网站数据
+export const ajax_config_queryByClient = (params: any) =>
+  axios.post(`/website/config/queryByClient`, params);
