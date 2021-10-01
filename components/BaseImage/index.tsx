@@ -13,8 +13,10 @@ const Index = (props) => {
         entries.forEach((item) => {
           // entries 是被监听的元素集合它是一个数组
           if (item.intersectionRatio <= 0) return;
-          const { target } = item;
-          if (!src) {
+          const target: any = item.target;
+          if (src) {
+            target.src = src;
+          } else {
             getRandomNumImage().then((res) => {
               target.src = res;
             });
