@@ -2,6 +2,8 @@ import { connect } from "react-redux";
 import { getRandomNumImage } from "./../../../utils";
 import moment from "moment";
 import Config from "../../../config";
+import BaseImage from "./../../../components/BaseImage";
+
 // 最近文章
 const Index = (props) => {
   let recentArticleData: any = { items: [] };
@@ -37,12 +39,7 @@ const Index = (props) => {
               href={`/article/${item.id}`}
               title={item.title}
             >
-              <img
-                // src="/img/loading.gif"
-                src={getRandomNumImage()}
-                // onerror='this.onerror=null,this.src="/img/404.jpg"'
-                alt={item.title}
-              />
+              <BaseImage alt={item.title} />
             </a>
             <div className="content">
               <a

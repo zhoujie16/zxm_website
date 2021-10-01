@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { getRandomNumImage } from "./../../utils";
 import moment from "moment";
 import Config from "../../config";
+import BaseImage from "./../../components/BaseImage";
 
 const Index = (props) => {
   let { mainArticleDetail } = props;
@@ -35,13 +36,7 @@ const Index = (props) => {
               title={item.title}
               onClick={() => spmFn(item)}
             >
-              <img
-                className="cover"
-                src={getRandomNumImage()}
-                // src="/img/loading.gif"
-                // src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png"
-                alt="cover"
-              />
+              <BaseImage className="cover" alt="cover" />
               <div className="content is-center">
                 <div className="date">
                   <i className="far fa-calendar-alt fa-fw"></i>{" "}

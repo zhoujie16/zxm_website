@@ -23,6 +23,9 @@ export const initState = {
     w_pv_all_count: "0",
     w_uv_all_count: "0",
     w_website_create_time: "0",
+    w_website_author: "周小米",
+    w_website_description: "",
+    w_website_announcement: "暂无公告",
   },
 };
 
