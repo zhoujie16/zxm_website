@@ -26,6 +26,7 @@ export const initState = {
     w_website_author: "周小米",
     w_website_description: "",
     w_website_announcement: "暂无公告",
+    w_website_beian: "",
   },
 };
 
