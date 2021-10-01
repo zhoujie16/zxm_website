@@ -1,8 +1,8 @@
 import { getRandomNumImage } from "../../utils";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Index = (props) => {
-  let { className, src = getRandomNumImage() } = props;
+  let { className, src = "" } = props;
   let _src = "/assets/imgs/loading.gif";
   const imgDiv = useRef();
 
@@ -14,7 +14,12 @@ const Index = (props) => {
           // entries 是被监听的元素集合它是一个数组
           if (item.intersectionRatio <= 0) return;
           const { target } = item;
-          target.src = src;
+          if (!src) {
+            getRandomNumImage().then((res) => {
+              target.src = res;
+            });
+          }
+
           io.unobserve(target);
         });
       },

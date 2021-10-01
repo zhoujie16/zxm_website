@@ -2,6 +2,7 @@ import {
   ajax_column_queryWithClient,
   ajax_article_query,
   ajax_config_queryByClient,
+  ajax_getRandomImage,
 } from "./../api";
 
 import { imglist } from "./imglist";
@@ -218,20 +219,6 @@ export const getDevicetype = () => {
   }
 };
 
-export const getRandomNumImage = () => {
-  let imgArr: any = imglist;
-  return imgArr[randomNum(0, imgArr.length - 1)];
-  function randomNum(minNum: any, maxNum: any) {
-    switch (arguments.length) {
-      case 1:
-        return parseInt(Math.random() * minNum + 1, 10);
-        break;
-      case 2:
-        return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-        break;
-      default:
-        return 0;
-        break;
-    }
-  }
+export const getRandomNumImage = async () => {
+  return await ajax_getRandomImage({});
 };
