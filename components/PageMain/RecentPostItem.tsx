@@ -1,5 +1,6 @@
 import moment from "moment";
 import { getRandomNumImage } from "./../../utils";
+import BaseImage from "./../../components/BaseImage";
 
 const Index = (props: any) => {
   let { itemInfo, curIndex } = props;
@@ -23,14 +24,7 @@ const Index = (props: any) => {
     <div className="recent-post-item">
       <div className={postClass}>
         <a href={herfUrl} title={title}>
-          <img
-            className="post_bg"
-            src={getRandomNumImage()}
-            // src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
-            // src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
-            // onerror='this.onerror=null,this.src="/img/404.jpg"'
-            alt={title}
-          />
+          <BaseImage className="post_bg" />
         </a>
       </div>
       <div className="recent-post-info">

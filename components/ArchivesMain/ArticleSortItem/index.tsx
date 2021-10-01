@@ -1,6 +1,7 @@
 import moment from "moment";
 import Link from "next/link";
 import { getRandomNumImage } from "./../../../utils";
+import BaseImage from "./../../../components/BaseImage";
 
 const Index = (props: any) => {
   let { itemInfo } = props;
@@ -28,12 +29,7 @@ const Index = (props: any) => {
         title={title}
         href={`/article/${id}`}
       >
-        <img
-          src={getRandomNumImage()}
-          // src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-diy-cover.png"
-          alt={title}
-          // onerror='this.onerror=null,this.src="/img/404.jpg"'
-        />
+        <BaseImage alt={title} />
       </a>
       {/* </Link> */}
       <div className="article-sort-item-info">

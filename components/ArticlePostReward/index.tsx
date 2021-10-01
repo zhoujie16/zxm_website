@@ -1,4 +1,5 @@
 import Config from "../../config";
+import BaseImage from "./../../components/BaseImage";
 
 const Index = () => {
   const onhover = () => {
@@ -23,18 +24,16 @@ const Index = () => {
       <div className="reward-main">
         <ul className="reward-all">
           <li className="reward-item">
-            <img
+            <BaseImage
               className="post-qr-code-img"
-              // src="/img/loading.gif"
               src="https://i.loli.net/2021/09/19/6D1Ht4LRiyh2Vor.jpg"
               alt="微信"
             />
             <div className="post-qr-code-desc">微信</div>
           </li>
           <li className="reward-item">
-            <img
+            <BaseImage
               className="post-qr-code-img"
-              // src="/img/loading.gif"
               src="https://i.loli.net/2021/09/19/Dx584Xlf1enGbBo.jpg"
               alt="支付宝"
             />

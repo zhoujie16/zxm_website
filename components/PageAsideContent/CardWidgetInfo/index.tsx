@@ -1,26 +1,38 @@
+import BaseImage from "./../../../components/BaseImage";
+
 // 博主信息
-const Index = () => {
+import { connect } from "react-redux";
+
+const Index = (props) => {
+  let w_website_author = "";
+  let w_website_description = "";
+  let w_article_all_count = 0;
+  let w_column_all_count = 0;
+  try {
+    w_website_author = props.pageConfigData.w_website_author;
+    w_website_description = props.pageConfigData.w_website_description;
+    w_article_all_count = props.pageConfigData.w_article_all_count;
+    w_column_all_count = props.pageConfigData.w_column_all_count;
+  } catch (error) {
+    console.log(error);
+  }
   return (
     <div className="card-widget card-info">
       <div className="is-center">
         <div className="avatar-img">
-          <img
+          <BaseImage
             src="https://gitee.com/zz16/upic/raw/master/2020/04/1586355398747.jpg"
-            // src="/img/avatar.png"
-            // onerror='this.onerror=null,this.src="/img/friend_404.gif"'
             alt="avatar"
           />
         </div>
-        <div className="author-info__name">周小米</div>
-        <div className="author-info__description">
-          没有高深的知识，没有进阶的技巧。只是，万丈高楼平地起，千里之行始于足下，千里长提溃于蚁穴。能把简单的做好就是不简单，你能走多远，不是在于你有多聪明，而是取决于你有多勤奋，共勉。
-        </div>
+        <div className="author-info__name">{w_website_author}</div>
+        <div className="author-info__description">{w_website_description}</div>
       </div>
       <div className="card-info-data">
         <div className="card-info-data-item is-center">
           <a href="/archives/">
             <div className="headline">文章</div>
-            <div className="length-num">2840</div>
+            <div className="length-num">{w_article_all_count}</div>
           </a>
         </div>
         {/* <div className="card-info-data-item is-center">
@@ -32,7 +44,7 @@ const Index = () => {
         <div className="card-info-data-item is-center">
           <a href="/categories/">
             <div className="headline">分类</div>
-            <div className="length-num">99</div>
+            <div className="length-num">{w_column_all_count}</div>
           </a>
         </div>
       </div>
@@ -64,4 +76,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default connect((state) => state)(Index);

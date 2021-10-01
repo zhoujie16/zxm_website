@@ -16,6 +16,17 @@ export const initState = {
   pageCategoriesData: {
     parent_id: 0,
   }, // 页面分类数据
+  pageConfigData: {
+    w_article_all_count: "0",
+    w_column_all_count: "0",
+    w_last_update_time: "0",
+    w_pv_all_count: "0",
+    w_uv_all_count: "0",
+    w_website_create_time: "0",
+    w_website_author: "周小米",
+    w_website_description: "",
+    w_website_announcement: "暂无公告",
+  },
 };
 
 // create your reducer
@@ -52,6 +63,11 @@ const reducer = (state = initState, action: AnyAction) => {
       return {
         ...state,
         pageCategoriesData: action.payload,
+      };
+    case "Set_pageConfigData":
+      return {
+        ...state,
+        pageConfigData: action.payload,
       };
     default:
       return state;

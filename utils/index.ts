@@ -1,4 +1,11 @@
-import { ajax_column_queryWithClient, ajax_article_query } from "./../api";
+import {
+  ajax_column_queryWithClient,
+  ajax_article_query,
+  ajax_config_queryByClient,
+  ajax_getRandomImage,
+} from "./../api";
+
+import { imglist } from "./imglist";
 
 export const getPageCommonData = async (store: any) => {
   // 分类
@@ -15,6 +22,13 @@ export const getPageCommonData = async (store: any) => {
   store.dispatch({
     type: "Get_recentArticleData",
     payload: recentArticleData,
+  });
+  // 网站资讯
+
+  let pageConfigData = await ajax_config_queryByClient({});
+  store.dispatch({
+    type: "Set_pageConfigData",
+    payload: pageConfigData,
   });
 };
 
@@ -205,54 +219,6 @@ export const getDevicetype = () => {
   }
 };
 
-export const getRandomNumImage = () => {
-  let imgArr: any = [
-    "https://i.loli.net/2021/09/14/S65WOMkKDtwQeRp.png",
-    "https://i.loli.net/2021/09/14/fjFNLwPrpsHGnCO.png",
-    "https://i.loli.net/2021/09/14/IaWM13KU4PNGAsT.png",
-    "https://i.loli.net/2021/09/14/o6dejwu4mbRvDlg.png",
-    "https://i.loli.net/2021/09/14/UehMuBgx1NdzWqr.png",
-    "https://i.loli.net/2021/09/14/IcehdjWBbosDnCT.png",
-    "https://i.loli.net/2021/09/14/qP1igkvAbIKECNc.png",
-    "https://i.loli.net/2021/09/14/BUlNzIkXbZd157D.png",
-    "https://i.loli.net/2021/09/14/dkiJW2jLMIqhgEz.png",
-    "https://i.loli.net/2021/09/14/qaDto9bwB8KlVue.png",
-    "https://i.loli.net/2021/09/14/xyacSFulzZOPAif.png",
-    "https://i.loli.net/2021/09/14/vipHlgA8C4LQ1Xf.png",
-    "https://i.loli.net/2021/09/14/cQUVPEu51NihDJr.png",
-    "https://i.loli.net/2021/09/14/ZdcigNP2uWLEz9k.png",
-    "https://i.loli.net/2021/09/14/lPesbuqvMw7FxK5.png",
-    "https://i.loli.net/2021/09/14/ASEckqlgNjfywrz.png",
-    "https://i.loli.net/2021/09/14/L4BgNPxf3cpb5d7.png",
-    "https://i.loli.net/2021/09/14/BHjTLbA6DyrIFeN.png",
-    "https://i.loli.net/2021/09/14/P2dr7Dhb6f1YslI.png",
-    "https://i.loli.net/2021/09/14/AaIM6yi95DjoZY3.png",
-    "https://i.loli.net/2021/09/14/s6viDq8SCwpOtAG.png",
-    "https://i.loli.net/2021/09/14/vao8SERgLV6IrfP.png",
-    "https://i.loli.net/2021/09/14/UZNc9BIf1MLe4GR.png",
-    "https://i.loli.net/2021/09/14/m9YCJoervSzjtPU.png",
-    "https://i.loli.net/2021/09/14/ZlSbW7V3o2GwXFq.png",
-    "https://i.loli.net/2021/09/14/4kqKoVM1YGDax9n.png",
-    "https://i.loli.net/2021/09/14/XUeV3sZlAqEbijM.png",
-    "https://i.loli.net/2021/09/14/DGqshjKWVC49uHy.png",
-    "https://i.loli.net/2021/09/14/428bnlaXuZCdrAW.png",
-    "https://i.loli.net/2021/09/14/jNvelxiPM1uZCyc.png",
-    "https://i.loli.net/2021/09/14/ODy6QVFe124wNfS.png",
-    "https://i.loli.net/2021/09/14/3UZpdwy9P7DtWYJ.png",
-    "https://i.loli.net/2021/09/14/xNOb68irogvIaPn.png",
-  ];
-  return imgArr[randomNum(0, imgArr.length - 1)];
-  function randomNum(minNum: any, maxNum: any) {
-    switch (arguments.length) {
-      case 1:
-        return parseInt(Math.random() * minNum + 1, 10);
-        break;
-      case 2:
-        return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-        break;
-      default:
-        return 0;
-        break;
-    }
-  }
+export const getRandomNumImage = async () => {
+  return await ajax_getRandomImage({});
 };
