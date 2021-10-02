@@ -76,6 +76,8 @@ async function filteMdToHtml(filePath) {
 // 保存一个目录里的所有md文件解析到博客数据库
 async function saveMd() {
   const C_KEY = "MY_BLOG";
+  // 隐藏原来的 S
+  // 隐藏原来的 E
   let mdListPath = await filteFileMdList(path.join(__dirname, "./../_posts"));
   console.log("mdListPath", mdListPath);
   for (let i = 0; i < mdListPath.length; i++) {
@@ -83,12 +85,11 @@ async function saveMd() {
     let mdContent = await filteMdToHtml(mdPath);
     let { contentHtml } = mdContent;
     if (contentHtml) {
-      let { title, date, categories, password, cid } = mdContent.data;
+      let { title, date, categories, password, column_id } = mdContent.data;
       // console.log({
       //   title,
       //   date,
-      //   categories,
-      // contentHtml,
+      //   column_id,
       // });
       if (password) {
         contentHtml = "这里有东西被加密了，暂时无法查看哦";
@@ -96,7 +97,7 @@ async function saveMd() {
       let saveRes = await axios.post(`${baseUrl}/website/article/saveMyBlog`, {
         title,
         date,
-        cid,
+        column_id,
         categories,
         contentHtml,
       });
