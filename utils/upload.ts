@@ -89,8 +89,7 @@ async function saveMd() {
       // console.log({
       //   title,
       //   date,
-      //   categories,
-      // contentHtml,
+      //   column_id,
       // });
       if (password) {
         contentHtml = "这里有东西被加密了，暂时无法查看哦";

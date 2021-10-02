@@ -3,6 +3,7 @@ title: git cherry-pick 教程
 date: 2021-02-09 23:00:22
 tags:
 author: 周小米
+column_id: 13
 ---
 
 # git cherry-pick 教程

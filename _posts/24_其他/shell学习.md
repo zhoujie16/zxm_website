@@ -2,6 +2,7 @@
 title: shell学习
 date: 2020-01-19 14:25:35
 tags:
+column_id: 24
 ---
 
 # Shell 变量

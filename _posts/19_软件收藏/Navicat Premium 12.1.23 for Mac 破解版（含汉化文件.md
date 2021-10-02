@@ -4,6 +4,7 @@ title: 破解版（含汉化文件）
 date: 2020-01-24 00:31:21
 tags:
 categories: mac软件
+column_id: 19
 ---
 
 ## Navicat Premium 12.1.23 for Mac 破解版（含汉化文件）

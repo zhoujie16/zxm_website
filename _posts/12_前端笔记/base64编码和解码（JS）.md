@@ -3,6 +3,7 @@ title: base64编码和解码（JS）
 date: 2017-02-21 16:39:23
 tags:
 categories: 前端
+column_id: 12
 ---
 ```
 var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";

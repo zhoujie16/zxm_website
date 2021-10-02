@@ -3,6 +3,7 @@ title: 图解Javascript上下文与作用域
 date: 2019-04-03 16:41:38
 tags:
 categories: 前端
+column_id: 12
 ---
 
 本文尝试阐述Javascript中的上下文与作用域背后的机制，主要涉及到执行上下文（execution context）、作用域链（scope chain）、闭包（closure）、`this`等概念。

@@ -3,6 +3,7 @@ title: Mac安装和使用homebrew
 date: 2019-07-16 11:01:53
 tags: 
 categories: mac技巧
+column_id: 13
 ---
 
 # [Homebrew](https://brew.sh/)

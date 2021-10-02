@@ -3,6 +3,7 @@ title: overflow深入理解
 date: 2017-07-01 15:00:42
 tags:
 categories: 前端
+column_id: 12
 ---
 ![QQ截图20170701142145.png](http://pic1.zhoujie16.cn/006tNc79ly1g3zkj16hhxj30yg0jdqct.jpg)
 1.如果overflow-x与overflow-y的值相同则等同于overflow；

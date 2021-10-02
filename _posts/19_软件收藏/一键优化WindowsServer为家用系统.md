@@ -3,6 +3,7 @@ title: 一键优化Windows Server为家用系统
 date: 2021-02-08 15:30:10
 tags:
 categories: win软件
+column_id: 19
 ---
 
 可用于 Windows Server 2016 和 2019 系统

@@ -3,6 +3,7 @@ title: Homebrew安装与卸载
 date: 2019-12-16 15:48:45
 tags:
 categories: mac技巧
+column_id: 13
 ---
 # Homebrew卸载、安装与更改清华镜像
 

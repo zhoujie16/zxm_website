@@ -3,6 +3,7 @@ title: 安装小飞机 shadowsocks 翻墙服务端 CentOS
 date: 2020-01-15 13:10:01
 tags:
 categories: 科学上网
+column_id: 13
 ---
 
 ## 安装小飞机 shadowsocks 翻墙服务端 CentOS

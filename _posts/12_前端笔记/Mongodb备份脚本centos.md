@@ -3,6 +3,7 @@ title: Mongodb备份脚本centos
 date: 2019-04-09 14:41:52
 tags:
 categories: 前端
+column_id: 12
 ---
 
 #### 创建Mongodb数据库备份目录

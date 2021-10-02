@@ -3,6 +3,7 @@ title: 'JavaScript排序,冒泡,选择,插入,归并'
 date: 2019-03-01 11:32:15
 tags:
 categories: 前端
+column_id: 12
 ---
 
 不过说到排序，最容易想到的就是冒泡排序，选择排序，插入排序了。

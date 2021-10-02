@@ -1,33 +1,33 @@
 ---
-title: trojan服务端的安装
-date: 2020-02-05 11:34:11
+title: trojan-docker服务端的安装
+date: 2020-02-05 10:34:11
 tags:
 categories: 科学上网
+column_id: 13
 ---
 
-trojan github地址：[https://github.com/trojan-gfw/trojan](https://github.com/trojan-gfw/trojan)
+github地址：[https://github.com/trojan-gfw/trojan](https://github.com/trojan-gfw/trojan)
 
-trojan 文档地址：[https://trojan-gfw.github.io/trojan/](https://trojan-gfw.github.io/trojan/)
+docker hub 地址：[https://hub.docker.com/r/trojangfw/trojan](https://hub.docker.com/r/trojangfw/trojan)
 
-trojan整体思路大概就是将流量模仿为最常见的https，以达到诱骗GFW的目的，详细的介绍请直接查看官方文档，官方文档写的也很详细，看不懂英文没关系，直接chrome浏览器翻译就好。
+```sh
+# 拉取镜像
+docker pull trojangfw/trojan
+# 启动
+docker run -dt --name trojan --restart=always -v /home/trojan:/config -v /home/trojan/ssl:/etc/letsencrypt -p 443:443 trojangfw/trojan
+# 查看运行日志
+docker logs -f trojan
+```
 
-我的服务器环境：
+###### trojan 配置
 
-- centos7
+```
+目录：/home/trojan
+配置文件路径：/home/trojan/config.json
+ssl证书路径：/home/trojan/ssl/
+```
 
-- trojan1.14.1
-
-- 有ssl证书的域名并成功添加dns解析
-
-##### 下载最新安装包到服务器上
-
-下载地址：[https://github.com/trojan-gfw/trojan/releases](https://github.com/trojan-gfw/trojan/releases)
-
-我选择的是  trojan-1.14.1-linux-amd64.tar.xz
-
-解压缩放到任意目录里，examples 文件夹下是配置示例，服务端选择 server.json-example，复制里面的配置到config.json 里面。config.json 文件名也可修改。为了区分服务端和客户端我的改成了server.json。
-
-大部分直接默认即可，只需要修改密码和ssl证书，mysql也可选择配置。
+###### 配置文件
 
 配置文件解释 以官方文档：https://trojan-gfw.github.io/trojan/config 为准。
 
@@ -79,25 +79,8 @@ trojan整体思路大概就是将流量模仿为最常见的https，以达到诱
 }
 ```
 
-###### mysql配置的解释
-
-需要注意的是Trojan只会读写`password`，`quota`，`download`，和`upload`字段。为了便于管理，还存在其他领域。出于效率和安全原因，存储在表中的密码必须由SHA224进行哈希处理。
+需要注意的是Trojan只会读/写`password`，`quota`，`download`，和`upload`领域。为了便于管理，还存在其他领域。出于效率和安全原因，存储在表中的密码必须由SHA224进行哈希处理。
 
 收到Trojan请求后，**如果服务器未能将密码与配置文件中设置的任何密码匹配**，它将查询数据库中的用户。如果成功，Trojan将检查是否`download + upload < quota`；如果是这样，则授予连接。**负值`quota`表示无限配额。**一个连接关闭后，Trojan将递增`download`和`upload`该用户通过用户已经使用的数据量的字段。
 
 的单元`quota`，`download`以及`upload`字段是字节。
-
-### 启动服务
-
-```shell
-# 在当前目录直接启动
-./trojan -c server.json
-# 后台启动 日志保存在 server.log 里
-nohup ./trojan -c server.json > server.log 2>&1 &
-# 停止服务 查找 443 端口占用进程并杀掉
-lsof -i tcp:443
-kill 进程ID
-# 停止进程
-
-
-```

@@ -3,6 +3,7 @@ title: 准确的检查你的javascript数据类型小工具typeCompare
 date: 2019-07-01 15:37:55
 tags:
 categories: 前端
+column_id: 12
 ---
 
 更简单，准确的检查你的javascript数据类型

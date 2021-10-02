@@ -3,6 +3,7 @@ title: uni-app 入坑指南
 date: 2020-12-10 15:00:42
 tags:
 categories: 前端
+column_id: 12
 ---
 #### 演讲ppt下载地址
 链接: https://pan.baidu.com/s/1-Od8VvfnUG1reI4sMTz_2A 提取码: 23qy 

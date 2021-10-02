@@ -3,6 +3,7 @@ title: 利用IntersectionObserve-API轻松实现惰性加载和无限滚动
 date: 2019-03-01 12:34:19
 tags:
 categories: 前端
+column_id: 12
 ---
 
 网页开发时，常常需要了解某个元素是否进入了”视口”（viewport），即用户能不能看到它。

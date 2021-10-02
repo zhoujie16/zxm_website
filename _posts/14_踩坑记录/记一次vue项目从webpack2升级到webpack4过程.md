@@ -3,6 +3,7 @@ title: 记一次vue项目从webpack2升级到webpack4过程
 date: 2020-04-19 14:37:51
 tags:
 categories: 踩坑记录
+column_id: 14
 ---
 
 ### 背景

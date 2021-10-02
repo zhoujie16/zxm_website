@@ -3,6 +3,7 @@ title: Mac安装和使用nginx
 date: 2019-07-16 11:27:40
 tags: 
 categories: mac技巧
+column_id: 13
 ---
 
 ## Nginx和环境准备

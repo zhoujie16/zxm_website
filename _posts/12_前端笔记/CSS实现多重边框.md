@@ -3,6 +3,7 @@ title: CSS实现多重边框
 date: 2017-06-28 22:34:59
 tags:
 categories: 前端
+column_id: 12
 ---
 实现这样的效果 简单
 

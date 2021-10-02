@@ -3,6 +3,7 @@ title: trojan客户端安装（PC）
 date: 2020-02-05 12:57:23
 tags:
 categories: 科学上网
+column_id: 13
 ---
 
 PC端使用trojan有2步，一是需要在本地计算机启动代理转发服务器，二是安装代理客户端。

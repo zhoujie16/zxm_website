@@ -3,6 +3,7 @@ title: 利用GitHub结合PicGo自建图床
 date: 2019-07-25 17:00:43
 tags:
 categories: 奇技淫巧
+column_id: 24
 ---
 
 之前都用微博图床，然而微博图床从2019年4月开始实行了防盗链😂，不建议继续使用。

@@ -3,6 +3,7 @@ title: JavaScript多线程编程-worker
 date: 2019-03-07 14:03:32
 tags:
 categories: 前端
+column_id: 12
 ---
 > 远离浏览器卡顿，提高用户体验，提升代码运行效率，使用多线程编程方法。
 

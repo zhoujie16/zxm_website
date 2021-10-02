@@ -3,6 +3,7 @@ title: jsbase64
 date: 2019-08-23 14:17:16
 tags:
 categories: 前端
+column_id: 12
 ---
 
 ```javascript

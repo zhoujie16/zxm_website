@@ -3,6 +3,7 @@ title: 离线KMS激活工具 HEU KMS Activator
 date: 2021-02-08 14:45:30
 tags:
 categories: win软件
+column_id: 19
 ---
  
 ```

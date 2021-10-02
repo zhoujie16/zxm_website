@@ -3,6 +3,7 @@ title: babel与webpack构建与案例剖析
 date: 2021-06-20 00:00:01
 tags:
 categories: 前端构建工具大PK
+column_id: 20
 ---
 
 ### 一、什么是 webpack

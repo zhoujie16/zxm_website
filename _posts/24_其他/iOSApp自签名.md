@@ -3,6 +3,7 @@ title: iOSApp签名
 date: 2020-01-28 14:16:00
 tags:
 categories: 奇技淫巧
+column_id: 24
 ---
 
 iOS App 签名工具：

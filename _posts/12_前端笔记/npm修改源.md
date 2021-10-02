@@ -3,6 +3,7 @@ title: npm修改源
 date: 2019-06-19 17:17:42
 tags:
 categories: 前端
+column_id: 12
 ---
 1.得到原本的镜像地址
 

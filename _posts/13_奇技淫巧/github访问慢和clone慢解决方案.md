@@ -2,6 +2,7 @@
 title: github访问慢和clone慢解决方案
 date: 2019-07-25 11:17:20
 tags:
+column_id: 13
 ---
 
 经常要clone github中的一些项目，无奈如果不爬梯子的话速度实在是龟速，经常1k/s，于是搜了下解决方法，改HOSTS大法。

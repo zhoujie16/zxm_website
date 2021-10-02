@@ -3,6 +3,7 @@ title: mac命令行启动tomcat
 date: 2017-10-09 12:16:17
 tags:
 categories: mac技巧
+column_id: 13
 ---
 1、检查安装环境
       可以在shell终端运行如下命令查看是否安装了java，以及JDK的版本：

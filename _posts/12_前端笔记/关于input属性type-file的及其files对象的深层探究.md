@@ -3,6 +3,7 @@ title: 关于input属性type=file的及其files对象的深层探究
 date: 2019-02-28 10:56:20
 tags:
 categories: 前端
+column_id: 12
 ---
 
 我们都知道，html5中有个input type=file元素。用该元素可以实现页面上传文件的功能

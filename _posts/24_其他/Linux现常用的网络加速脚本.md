@@ -2,6 +2,7 @@
 title: Linux现常用的网络加速脚本
 date: 2020-04-16 14:51:15
 tags:
+column_id: 24
 ---
 
 ### 原版BBR/魔改BBR/BBR Plus/锐速(Lotserver)四合一脚本/一键安装

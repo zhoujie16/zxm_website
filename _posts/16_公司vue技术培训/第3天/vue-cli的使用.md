@@ -3,6 +3,7 @@ title: 第三天 3-1 vue-cli的使用
 date: 2019-08-08 00:00:00
 tags:
 categories: 公司vue技术培训
+column_id: 16
 ---
 
 # vue-cli

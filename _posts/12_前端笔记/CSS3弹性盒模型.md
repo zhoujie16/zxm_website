@@ -3,6 +3,7 @@ title: CSS3弹性盒模型
 date: 2017-04-16 01:03:32
 tags:
 categories: 前端
+column_id: 12
 ---
 弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。
 设置 display 属性的值为 flex 或 inline-flex。

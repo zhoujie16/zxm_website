@@ -3,6 +3,7 @@ title: 创建React Native应用程序
 date: 2019-07-26 18:06:56
 tags:
 categories: react
+column_id: 12
 ---
 
 2个脚手架工具

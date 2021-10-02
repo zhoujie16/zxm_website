@@ -3,6 +3,7 @@ title: 跨域资源共享CORS详解
 date: 2019-03-01 11:04:11
 tags:
 categories: 前端
+column_id: 12
 
 
 ---

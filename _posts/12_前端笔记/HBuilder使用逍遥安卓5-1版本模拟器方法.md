@@ -3,6 +3,7 @@ title: HBuilder使用逍遥安卓5.1版本模拟器方法
 date:  2017-06-17 15:56:00
 tags:
 categories: 前端
+column_id: 12
 ---
 ### 1.下载逍遥安卓模拟器
 逍遥安卓模拟器官网地址：[逍遥安卓模拟器官网](https://www.xyaz.cn/)；

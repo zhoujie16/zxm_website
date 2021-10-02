@@ -3,6 +3,7 @@ title: 你想知道的关于JavaScript作用域的一切
 date: 2019-04-03 17:12:06
 tags:
 categories: 前端
+column_id: 12
 ---
 
 ## 你想知道的关于JavaScript作用域的一切(译)

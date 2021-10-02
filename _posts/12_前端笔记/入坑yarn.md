@@ -3,6 +3,7 @@ title: 入坑yarn
 date: 2019-07-17 13:56:54
 tags:
 categories: 前端
+column_id: 12
 ---
 
 ## 前言

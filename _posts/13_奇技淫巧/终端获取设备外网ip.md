@@ -3,6 +3,7 @@ title: 终端获取设备外网ip
 date: 2020-04-16 14:48:53
 tags:
 categories: mac技巧
+column_id: 13
 ---
 
 运用curl获取自己的外网IP

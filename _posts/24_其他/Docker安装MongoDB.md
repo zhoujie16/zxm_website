@@ -3,6 +3,7 @@ title: Docker安装MongoDB
 date: 2019-05-16 13:10:01
 tags:
 categories:
+column_id: 24
 ---
 
 MongoDB 是一款较为常用的NOSQL 数据库，结合 Docker 使用，能实现轻松配置部署、迁移，本文以下为简要介绍如何在 Docker 中部署并使用 MongoDB。下文主要分为几个部分，内容如下：

@@ -3,6 +3,7 @@ title: css3属性box-decoration-break
 date: 2019-03-07 14:20:40
 tags:
 categories: 前端
+column_id: 12
 ---
 这两天接触到一个很有意思的 CSS 属性 -- `box-decoration-break`。下面就一起去一探究竟。
 

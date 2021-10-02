@@ -3,6 +3,7 @@ title: 五句话搞定JavaScript作用域
 date: 2019-04-03 16:50:12
 tags:
 categories: 前端
+column_id: 12
 ---
 
 提示：此文针对ES5，不涉及ES2015（又称ES6）

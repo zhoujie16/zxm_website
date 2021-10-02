@@ -3,6 +3,7 @@ title: Docker 安装 Redis
 date: 2020-01-14 13:10:01
 tags:
 categories:
+column_id: 24
 
 ---
 

@@ -3,6 +3,7 @@ title: ESModule与Vite原理剖析
 date: 2021-06-20 00:00:02
 tags:
 categories: 前端构建工具大PK
+column_id: 20
 ---
 
 ### 一、Vite 是什么

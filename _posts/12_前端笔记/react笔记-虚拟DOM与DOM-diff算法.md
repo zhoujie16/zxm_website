@@ -3,6 +3,7 @@ title: react笔记-虚拟DOM与DOM-diff算法
 date: 2018-10-26 23:48:28
 tags:
 categories: react
+column_id: 12
 ---
 ### 1). 虚拟DOM是什么?
 

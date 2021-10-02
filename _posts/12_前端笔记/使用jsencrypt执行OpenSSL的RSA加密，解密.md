@@ -3,6 +3,7 @@ title: 使用jsencrypt执行OpenSSL的RSA加密，解密
 date: 2017-02-23 16:32:56
 tags:
 categories: 前端
+column_id: 12
 ---
 jsencrypt的GITHUB地址：https://github.com/travist/jsencrypt
 

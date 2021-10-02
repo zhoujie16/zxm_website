@@ -3,6 +3,7 @@ title: react笔记-组件的生命周期
 date: 2018-10-26 23:40:07
 tags:
 categories: react
+column_id: 12
 ---
 1. 组件的三个生命周期状态:
 	Mount：插入真实 DOM
