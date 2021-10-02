@@ -4,25 +4,23 @@ import ArticlePostReward from "./../ArticlePostReward";
 import ArticlePagination from "./../ArticlePagination";
 import ArticleRelatedPosts from "./../ArticleRelatedPosts";
 import { connect } from "react-redux";
+import PajkUser from "./PajkUser";
 
 const Index = (props: any) => {
   let { mainArticleDetail } = props;
-  let content_rich = mainArticleDetail.article.content_rich;
   return (
     <main className="layout" id="content-inner">
       <div id="post">
-        <article
-          className="post-content"
-          id="article-container"
-          dangerouslySetInnerHTML={{ __html: content_rich }}
-        ></article>
+        <article className="post-content" id="article-container">
+          <PajkUser />
+        </article>
         {/* <ArticleCopyright /> */}
         {/* <ArticleTagShare /> */}
-        <ArticlePostReward />
+        {/* <ArticlePostReward /> */}
         {/* <AdsWrap /> */}
         <hr />
-        <ArticlePagination />
-        <ArticleRelatedPosts />
+        {/* <ArticlePagination /> */}
+        {/* <ArticleRelatedPosts /> */}
         {/* <hr /> */}
         {/* <ArticleComment /> */}
       </div>
