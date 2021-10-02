@@ -37,3 +37,7 @@ export const ajax_config_queryByClient = (params: any) =>
 // 获取随机图片
 export const ajax_getRandomImage = (params: any) =>
   axios.post(`/common/getRandomImage`, params);
+
+// /pajk/task/queryAllUserState
+export const ajax_task_queryAllUserState = (params: any) =>
+  axios.post(`/pajk/task/queryAllUserState`, params);
