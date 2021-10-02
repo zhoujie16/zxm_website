@@ -76,6 +76,8 @@ async function filteMdToHtml(filePath) {
 // 保存一个目录里的所有md文件解析到博客数据库
 async function saveMd() {
   const C_KEY = "MY_BLOG";
+  // 隐藏原来的 S
+  // 隐藏原来的 E
   let mdListPath = await filteFileMdList(path.join(__dirname, "./../_posts"));
   console.log("mdListPath", mdListPath);
   for (let i = 0; i < mdListPath.length; i++) {
