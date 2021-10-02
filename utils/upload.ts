@@ -85,7 +85,7 @@ async function saveMd() {
     let mdContent = await filteMdToHtml(mdPath);
     let { contentHtml } = mdContent;
     if (contentHtml) {
-      let { title, date, categories, password, cid } = mdContent.data;
+      let { title, date, categories, password, column_id } = mdContent.data;
       // console.log({
       //   title,
       //   date,
@@ -98,7 +98,7 @@ async function saveMd() {
       let saveRes = await axios.post(`${baseUrl}/website/article/saveMyBlog`, {
         title,
         date,
-        cid,
+        column_id,
         categories,
         contentHtml,
       });
