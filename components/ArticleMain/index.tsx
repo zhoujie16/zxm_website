@@ -4,6 +4,7 @@ import ArticlePostReward from "./../ArticlePostReward";
 import ArticlePagination from "./../ArticlePagination";
 import ArticleRelatedPosts from "./../ArticleRelatedPosts";
 import { connect } from "react-redux";
+import ArticleComment from "../ArticleComment";
 
 const Index = (props: any) => {
   let { mainArticleDetail } = props;
@@ -24,7 +25,7 @@ const Index = (props: any) => {
         <ArticlePagination />
         <ArticleRelatedPosts />
         {/* <hr /> */}
-        {/* <ArticleComment /> */}
+        <ArticleComment />
       </div>
       <PageAsideContent />
     </main>
