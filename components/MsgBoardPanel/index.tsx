@@ -1,6 +1,7 @@
 import PageAsideContent from "./../PageAsideContent";
 import { connect } from "react-redux";
 import { useEffect } from "react";
+import Config from "../../config";
 
 const Index = (props: any) => {
   useEffect(() => {
@@ -8,7 +9,7 @@ const Index = (props: any) => {
     setTimeout(() => {
       Waline({
         el: "#waline",
-        serverURL: "http://127.0.0.1:8360",
+        serverURL: Config.walineServerURL,
         meta: ["nick", "mail"],
         copyright: false,
       });
