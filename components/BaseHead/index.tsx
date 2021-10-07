@@ -36,9 +36,9 @@ const Index = () => {
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
       />
       <link rel="stylesheet" href="/index.css" />
+      <script async src="https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
       <script src="/lib/spm.js"></script>
       <script src="/index.js"></script>
-      {/* <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.5/dist/twikoo.all.min.js"></script> */}
     </Head>
   );
 };
