@@ -13,7 +13,7 @@ const Index = (props: any) => {
         meta: ["nick", "mail"],
         copyright: false,
       });
-    }, 0);
+    }, 500);
   }, []);
   return <div id="waline"></div>;
 };
