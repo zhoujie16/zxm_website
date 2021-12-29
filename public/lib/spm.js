@@ -49,7 +49,7 @@
     },
   };
   var env = "prod";
-  var baseUrl = "https://x.abczzz.cn/spm/spm";
+  var baseUrl = "https://xxx.xxx.cn/spm/spm";
   var href = window.location.href;
   if (
     href.indexOf("localhost") != -1 ||

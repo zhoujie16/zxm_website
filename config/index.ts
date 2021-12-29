@@ -30,8 +30,8 @@ if (process.env.NODE_ENV === "development") {
   Config = prodConfig;
   // 线上浏览器环境 需要配置远程地址
   if (process.browser) {
-    Config.apiUrl = "https://x.abczzz.cn";
-    Config.walineServerURL = "https://wl.abczzz.cn";
+    Config.apiUrl = "https://xxx.xxxx.cn";
+    Config.walineServerURL = "https://xxx.xxx.cn";
   }
 }
 
