@@ -2,18 +2,35 @@ import PageAsideContent from "./../PageAsideContent";
 import { connect } from "react-redux";
 import { useEffect } from "react";
 import Config from "../../config";
-
+let timer = null;
 const Index = (props: any) => {
-  useEffect(() => {
-    let Waline = window.Waline;
+  let initWaline = () => {
+    let initFn = () => {
+      console.log("initFn");
+      let Waline = window.Waline;
+      if (Config.walineServerURL) {
+        let walineDiv = document.getElementById("waline");
+        if (Waline && walineDiv) {
+          clearTimeout(timer);
+          Waline({
+            el: "#waline",
+            serverURL: Config.walineServerURL,
+            meta: ["nick", "mail"],
+            copyright: false,
+          });
+        } else {
+          timer = setTimeout(() => {
+            initFn();
+          }, 1000);
+        }
+      }
+    };
     setTimeout(() => {
-      Waline({
-        el: "#waline",
-        serverURL: Config.walineServerURL,
-        meta: ["nick", "mail"],
-        copyright: false,
-      });
-    }, 500);
+      initFn();
+    }, 2000);
+  };
+  useEffect(() => {
+    initWaline();
   }, []);
   return <div id="waline"></div>;
 };
