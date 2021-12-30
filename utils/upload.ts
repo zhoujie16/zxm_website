@@ -101,7 +101,8 @@ async function saveMd() {
         categories,
         contentHtml,
       });
-      if (saveRes.data.stat.code == 0) {
+      console.log(saveRes.data);
+      if (saveRes.data.stat && saveRes.data.stat.code == 0) {
         console.log("保存结果", saveRes.data, title);
       } else {
         console.log("保存失败");
