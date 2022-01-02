@@ -1,5 +1,4 @@
 let Config = {
-  blogName: "", // 网站名称
   blogCode: "", // 唯一code
   apiUrl: "", // api服务器地址
   walineServerURL: "", // 评论服务器地址
@@ -7,7 +6,6 @@ let Config = {
 };
 
 let devConfig = {
-  blogName: "周小米的博客",
   blogCode: "zxm_blog",
   apiUrl: "http://127.0.0.1:7001",
   walineServerURL: "http://127.0.0.1:8360",
@@ -15,7 +13,6 @@ let devConfig = {
 };
 
 let prodConfig = {
-  blogName: "周小米的博客",
   blogCode: "zxm_blog",
   apiUrl: "http://127.0.0.1:7001",
   walineServerURL: "http://127.0.0.1:8360",

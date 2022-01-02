@@ -20,7 +20,7 @@ const Index = (props: any) => {
       id="page-header"
       style={{
         backgroundImage:
-          "url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/categories.jpg)",
+          "url(https://s2.loli.net/2022/01/02/aqsQB1dNDxgP9EM.jpg)",
       }}
     >
       <PageNav />

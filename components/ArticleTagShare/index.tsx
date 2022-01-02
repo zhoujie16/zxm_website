@@ -18,7 +18,6 @@ const Index = () => {
       <div className="post_share">
         <div
           className="social-share"
-          data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png"
           data-sites="facebook,twitter,wechat,weibo,qq"
         ></div>
         <link
