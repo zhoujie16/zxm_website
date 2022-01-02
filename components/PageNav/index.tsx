@@ -10,6 +10,12 @@ const Index = (props: any) => {
   let columnList = props.mainCategoriesList;
   columnList = columnList.filter((x: any) => x.is_banner == true);
   columnList = getCategoriesTreeList(columnList);
+  let w_website_name = "";
+  try {
+    w_website_name = props.pageConfigData.w_website_name;
+  } catch (error) {
+    console.log(error);
+  }
 
   let [dType, setDYype] = useState("pc");
   let [showMobNav, setShowMobNav] = useState(false);
@@ -88,7 +94,7 @@ const Index = (props: any) => {
       <nav id="nav" className={nclass}>
         <span id="blog_name">
           <a id="site-name" href="/">
-            {Config.blogName}
+            {w_website_name}
           </a>
         </span>
         <div id="menus">

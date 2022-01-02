@@ -6,10 +6,12 @@ const Index = (props) => {
   let w_website_create_time = "";
   let website_time_range = "";
   let w_website_beian = "";
+  let w_website_bg = "";
   try {
     w_website_beian = props.pageConfigData.w_website_beian;
     w_website_author = props.pageConfigData.w_website_author;
     w_website_create_time = props.pageConfigData.w_website_create_time;
+    w_website_bg = props.pageConfigData.w_website_bg;
     website_time_range =
       moment(Number(w_website_create_time)).format("YYYY") +
       " - " +
@@ -21,8 +23,7 @@ const Index = (props) => {
     <footer
       id="footer"
       style={{
-        backgroundImage:
-          "url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg)",
+        backgroundImage: `url(${w_website_bg})`,
       }}
     >
       <div id="footer-wrap">

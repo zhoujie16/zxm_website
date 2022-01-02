@@ -8,11 +8,13 @@ const Index = (props) => {
   let w_website_description = "";
   let w_article_all_count = 0;
   let w_column_all_count = 0;
+  let w_website_git = "";
   try {
     w_website_author = props.pageConfigData.w_website_author;
     w_website_description = props.pageConfigData.w_website_description;
     w_article_all_count = props.pageConfigData.w_article_all_count;
     w_column_all_count = props.pageConfigData.w_column_all_count;
+    w_website_git = props.pageConfigData.w_website_git;
   } catch (error) {
     console.log(error);
   }
@@ -21,7 +23,7 @@ const Index = (props) => {
       <div className="is-center">
         <div className="avatar-img">
           <BaseImage
-            src="https://gitee.com/zz16/upic/raw/master/2020/04/1586355398747.jpg"
+            src="https://s2.loli.net/2022/01/02/91jamn6KisqRQBV.jpg"
             alt="avatar"
           />
         </div>
@@ -30,7 +32,7 @@ const Index = (props) => {
       </div>
       <div className="card-info-data">
         <div className="card-info-data-item is-center">
-          <a href="/archives/">
+          <a href="javascript:;">
             <div className="headline">文章</div>
             <div className="length-num">{w_article_all_count}</div>
           </a>
@@ -42,22 +44,27 @@ const Index = (props) => {
           </a>
         </div> */}
         <div className="card-info-data-item is-center">
-          <a href="/categories/">
+          <a href="javascript:;">
             <div className="headline">分类</div>
             <div className="length-num">{w_column_all_count}</div>
           </a>
         </div>
       </div>
-      {/* <a
-        className="button--animated"
-        id="card-info-btn"
-        target="_blank"
-        rel="noopener external nofollow noreferrer"
-        href="https://github.com/jerryc127/hexo-theme-butterfly"
-      >
-        <i className="fab fa-github"></i>
-        <span>Follow Me</span>
-      </a> */}
+      {w_website_git ? (
+        <a
+          className="button--animated"
+          id="card-info-btn"
+          target="_blank"
+          rel="noopener external nofollow noreferrer"
+          href={w_website_git}
+        >
+          <i className="fab fa-github"></i>
+          <span>Follow Me</span>
+        </a>
+      ) : (
+        ""
+      )}
+
       {/* <div className="card-info-social-icons is-center">
         <a
           className="social-icon"
