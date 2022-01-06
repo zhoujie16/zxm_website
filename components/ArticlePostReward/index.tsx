@@ -1,7 +1,8 @@
 import Config from "../../config";
 import BaseImage from "./../../components/BaseImage";
+import { connect } from "react-redux";
 
-const Index = () => {
+const Index = (props) => {
   const onhover = () => {
     try {
       let pathname = window.location.pathname;
@@ -16,7 +17,19 @@ const Index = () => {
       console.log(error);
     }
   };
-  return (
+  let w_sponsor_code: any = "";
+  let alipay_code = "";
+  let weixin_code = "";
+  try {
+    if (props.pageConfigData.w_sponsor_code) {
+      w_sponsor_code = JSON.parse(props.pageConfigData.w_sponsor_code);
+      alipay_code = w_sponsor_code.alipay;
+      weixin_code = w_sponsor_code.weixin;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+  return w_sponsor_code ? (
     <div className="post-reward">
       <div className="reward-button button--animated" onMouseEnter={onhover}>
         <i className="fas fa-qrcode"></i> 打赏
@@ -26,7 +39,7 @@ const Index = () => {
           <li className="reward-item">
             <BaseImage
               className="post-qr-code-img"
-              src="https://i.loli.net/2021/09/19/6D1Ht4LRiyh2Vor.jpg"
+              src={weixin_code}
               alt="微信"
             />
             <div className="post-qr-code-desc">微信</div>
@@ -34,7 +47,7 @@ const Index = () => {
           <li className="reward-item">
             <BaseImage
               className="post-qr-code-img"
-              src="https://i.loli.net/2021/09/19/Dx584Xlf1enGbBo.jpg"
+              src={alipay_code}
               alt="支付宝"
             />
             <div className="post-qr-code-desc">支付宝</div>
@@ -42,6 +55,9 @@ const Index = () => {
         </ul>
       </div>
     </div>
+  ) : (
+    ""
   );
 };
-export default Index;
+
+export default connect((state) => state)(Index);

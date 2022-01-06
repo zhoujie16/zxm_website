@@ -30,6 +30,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
           pageSize: 10,
           currentPage,
           column_id,
+          sort: "ASC",
         });
         store.dispatch({
           type: "Get_mainArticleData",

@@ -36,6 +36,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
         let mainArticleData: any = await ajax_article_query({
           pageSize: 10,
           currentPage,
+          sort: "DESC",
         });
         store.dispatch({
           type: "Get_mainArticleData",
