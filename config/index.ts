@@ -7,8 +7,8 @@ let Config = {
 
 if (process.env.NODE_ENV === "development") {
   // 开发环境配置
-  Config.apiUrl = "http://127.0.0.1:7001";
-  Config.walineServerURL = "http://127.0.0.1:8360";
+  Config.apiUrl = "http://127.0.0.1:781";
+  Config.walineServerURL = "http://127.0.0.1:782";
   Config.env = "development";
 } else if (process.env.NODE_ENV === "production") {
   // 线上环境配置
