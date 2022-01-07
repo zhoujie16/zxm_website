@@ -49,14 +49,14 @@
     },
   };
   var env = "prod";
-  var baseUrl = "https://xxx.xxx.cn/spm/spm";
+  var baseUrl = "http://t.abczzz.cn:781/spm/spm";
   var href = window.location.href;
   if (
     href.indexOf("localhost") != -1 ||
     href.indexOf("127.0.0.1") != -1 ||
     href.indexOf("0.0.0.0") != -1
   ) {
-    baseUrl = "http://127.0.0.1:7001/spm/spm";
+    baseUrl = "http://127.0.0.1:781/spm/spm";
     env = "test";
   }
   var guid2 = function () {
