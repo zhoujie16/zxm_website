@@ -2,6 +2,8 @@
 
 基于 NextJS 框架实现一个 SSR 的个人网站，闲来无事练手 , 搭配 后台管理系统 以及 NodeJS 服务端 一起组成完整的个人网站系统。
 
+目前托管到阿里云运行，访问地址 [https://zhoujie16.cn](https://zhoujie16.cn)，
+
 > 如果对你有帮助的话请右上角点个 star，非常感谢！
 
 ### 技术栈
@@ -12,9 +14,11 @@
 
 ### 项目预览
 
-【预览网站前台】：[https://zhoujie16.cn](https://zhoujie16.cn)
+【网站前台 demo】：[http://t.abczzz.cn:780](http://t.abczzz.cn:780)
 
-【预览后台管理】：暂未开放
+【后台管理 demo】：[http://t.abczzz.cn:783](http://t.abczzz.cn:783)
+
+> 演示账号/密码: admin / admin
 
 ### 项目地址
 
@@ -55,7 +59,7 @@ npm install;
 npm run dev;
 ```
 
-访问http://127.0.0.1:3100
+访问http://127.0.0.1:780
 
 ### 部署
 
