@@ -18,8 +18,8 @@ if (process.env.NODE_ENV === "development") {
     Config.apiUrl = "http://t.abczzz.cn:781";
     Config.walineServerURL = "http://t.abczzz.cn:782";
   } else {
-    Config.apiUrl = "http://127.0.0.1:7001";
-    Config.walineServerURL = "http://127.0.0.1:8360";
+    Config.apiUrl = "http://127.0.0.1:781";
+    Config.walineServerURL = "http://127.0.0.1:782";
   }
 }
 
