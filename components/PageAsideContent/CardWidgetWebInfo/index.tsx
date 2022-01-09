@@ -73,7 +73,7 @@ const Index = (props) => {
             {w_pv_week_count}
           </div>
         </div>
-        <div className="webinfo-item">
+        {/* <div className="webinfo-item">
           <div className="item-name">最后更新时间 :</div>
           <div
             className="item-count"
@@ -82,7 +82,7 @@ const Index = (props) => {
           >
             {w_last_update_time}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
