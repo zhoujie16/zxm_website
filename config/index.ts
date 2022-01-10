@@ -1,5 +1,5 @@
 let Config = {
-  blogCode: "zxm_demo", // 唯一code
+  blogCode: "zxm_blog", // 唯一code
   apiUrl: "", // api服务器地址
   walineServerURL: "", // 评论服务器地址
   env: "",
