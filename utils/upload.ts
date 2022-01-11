@@ -85,7 +85,8 @@ async function saveMd() {
     let mdContent = await filteMdToHtml(mdPath);
     let { contentHtml } = mdContent;
     if (contentHtml) {
-      let { title, date, categories, password, column_id } = mdContent.data;
+      let { title, date, categories, password, column_id, state } =
+        mdContent.data;
       // console.log({
       //   title,
       //   date,
@@ -100,6 +101,7 @@ async function saveMd() {
         column_id,
         categories,
         contentHtml,
+        state,
       });
       console.log(saveRes.data);
       if (saveRes.data.stat && saveRes.data.stat.code == 0) {
