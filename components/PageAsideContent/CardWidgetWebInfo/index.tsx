@@ -49,24 +49,24 @@ const Index = (props) => {
           <div className="item-name">本站总字数 :</div>
           <div className="item-count">50.6k</div>
         </div> */}
-        <div className="webinfo-item">
+        {/* <div className="webinfo-item">
           <div className="item-name">总访客数 :</div>
           <div className="item-count" id="busuanzi_value_site_uv">
             {w_uv_all_count}
           </div>
-        </div>
-        <div className="webinfo-item">
+        </div> */}
+        {/* <div className="webinfo-item">
           <div className="item-name">总访问量 :</div>
           <div className="item-count" id="busuanzi_value_site_pv">
             {w_pv_all_count}
           </div>
-        </div>
-        <div className="webinfo-item">
+        </div> */}
+        {/* <div className="webinfo-item">
           <div className="item-name">周访客数 :</div>
           <div className="item-count" id="busuanzi_value_site_uv">
             {w_uv_week_count}
           </div>
-        </div>
+        </div> */}
         <div className="webinfo-item">
           <div className="item-name">周访问量 :</div>
           <div className="item-count" id="busuanzi_value_site_pv">
