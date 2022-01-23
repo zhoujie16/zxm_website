@@ -222,3 +222,19 @@ export const getDevicetype = () => {
 export const getRandomNumImage = async () => {
   return await ajax_getRandomImage({});
 };
+
+export const getScript = (e) => {
+  return new Promise((t, o) => {
+    const a: any = document.createElement("script");
+    (a.src = e),
+      (a.async = !0),
+      (a.onerror = o),
+      (a.onload = a.onreadystatechange =
+        function () {
+          const e = this.readyState;
+          (e && "loaded" !== e && "complete" !== e) ||
+            ((a.onload = a.onreadystatechange = null), t());
+        }),
+      document.head.appendChild(a);
+  });
+};

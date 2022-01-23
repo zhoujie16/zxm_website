@@ -31,3 +31,7 @@ export const ajax_config_queryByClient = (params: any) =>
 // 获取随机图片
 export const ajax_getRandomImage = (params: any) =>
   axios.post(`/common/getRandomImage`, params);
+
+// 获取随机语录
+export const ajax_getSoulText = (params: any) =>
+  axios.post(`/common/getSoulText`, params);

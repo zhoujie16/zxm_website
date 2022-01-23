@@ -1,7 +1,9 @@
 import React, { useEffect, useCallback, useState } from "react";
 import { connect } from "react-redux";
 import PageNav from "../PageNav";
-import { scrollToDest } from "./../../utils";
+import Typed from "typed.js";
+import { ajax_getSoulText } from "./../../api/index";
+import { scrollToDest, getScript } from "./../../utils";
 
 const Index = (props) => {
   const scrollDownInIndex = () => {
@@ -15,6 +17,31 @@ const Index = (props) => {
   } catch (error) {
     console.log(error);
   }
+
+  // 初始化随机语录
+  let initSoul = async () => {
+    let sText: any = await ajax_getSoulText({});
+    if (!sText) {
+      return;
+    }
+    let typedItem = new Typed("#subtitle", {
+      strings: [sText.title],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: !0,
+      backSpeed: 50,
+      onLastStringBackspaced: async () => {
+        typedItem.stop();
+        await new Promise((r) => setTimeout(r, 3000));
+        typedItem.destroy();
+        await new Promise((r) => setTimeout(r, 400));
+        initSoul();
+      },
+    });
+  };
+  useEffect(() => {
+    initSoul();
+  });
   return (
     <header
       className="full_page"
