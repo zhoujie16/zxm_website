@@ -27,12 +27,13 @@ const Index = (props) => {
     let typedItem = new Typed("#subtitle", {
       strings: [sText.title],
       startDelay: 300,
+      backDelay: 5000,
       typeSpeed: 150,
       loop: !0,
       backSpeed: 50,
       onLastStringBackspaced: async () => {
         typedItem.stop();
-        await new Promise((r) => setTimeout(r, 3000));
+        await new Promise((r) => setTimeout(r, 2000));
         typedItem.destroy();
         await new Promise((r) => setTimeout(r, 400));
         initSoul();

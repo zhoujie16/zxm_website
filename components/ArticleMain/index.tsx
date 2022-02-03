@@ -5,6 +5,7 @@ import ArticlePagination from "./../ArticlePagination";
 import ArticleRelatedPosts from "./../ArticleRelatedPosts";
 import { connect } from "react-redux";
 import ArticleComment from "../ArticleComment";
+import ArticleCopyright from "../ArticleCopyright";
 
 const Index = (props: any) => {
   let { mainArticleDetail } = props;
@@ -17,14 +18,14 @@ const Index = (props: any) => {
           id="article-container"
           dangerouslySetInnerHTML={{ __html: content_rich }}
         ></article>
-        {/* <ArticleCopyright /> */}
+        <ArticleCopyright />
         {/* <ArticleTagShare /> */}
         <ArticlePostReward />
         {/* <AdsWrap /> */}
         <hr />
         <ArticlePagination />
         <ArticleRelatedPosts />
-        {/* <hr /> */}
+        <hr />
         <ArticleComment />
       </div>
       <PageAsideContent />

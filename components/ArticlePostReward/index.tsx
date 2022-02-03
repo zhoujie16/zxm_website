@@ -2,7 +2,7 @@ import Config from "../../config";
 import BaseImage from "./../../components/BaseImage";
 import { connect } from "react-redux";
 
-const Index = (props) => {
+const Index = (props: any) => {
   const onhover = () => {
     try {
       let pathname = window.location.pathname;
@@ -56,7 +56,7 @@ const Index = (props) => {
       </div>
     </div>
   ) : (
-    ""
+    <></>
   );
 };
 
