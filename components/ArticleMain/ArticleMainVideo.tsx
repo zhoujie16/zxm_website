@@ -11,12 +11,12 @@ const Index = (props) => {
   let fileId = "plyr-play-" + Math.random().toString(36).substr(2);
 
   try {
-    let { playInfo } = props;
+    let { playInfo } = props; 
     title = playInfo.title;
     wid = playInfo.wid;
     coverImgURL = playInfo.coverImgURL;
     playURL = playInfo.playURL;
-    fileId = playInfo.fileId;
+    fileId = `plyr_play_${playInfo.wid}`;
   } catch (error) {}
   useEffect(() => {
     let plryItem = new Plyr(`#${fileId}`, {
@@ -35,7 +35,7 @@ const Index = (props) => {
       },
     });
     plryItem.on("play", (event) => {
-      console.log("play");
+      // console.log("play");
       try {
         let pathname = window.location.pathname;
         let [x, b] = pathname.split("/");
