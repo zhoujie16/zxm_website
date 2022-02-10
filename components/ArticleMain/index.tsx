@@ -11,20 +11,20 @@ import ArticleMainVideo from "./ArticleMainVideo";
 const Index = (props: any) => {
   let { mainArticleDetail } = props;
   let content_rich = mainArticleDetail.article.content_rich;
-  let playInfo = null;
+  let playInfo = {};
   try {
     let { title, wid } = mainArticleDetail.article;
     let other1 = JSON.parse(mainArticleDetail.article.other1);
     let _playInfo = other1._playInfo;
     let videoMedia = other1.videoMedia;
     playInfo = { ..._playInfo, ...videoMedia, title, wid };
-    console.log("mainArticleDetail.article", mainArticleDetail.article);
+    // console.log("mainArticleDetail.article", playInfo);
   } catch (error) {}
 
   return (
     <main className="layout" id="content-inner">
       <div id="post">
-        {playInfo ? <ArticleMainVideo playInfo={playInfo} /> : <></>}
+        {playInfo.playURL ? <ArticleMainVideo playInfo={playInfo} /> : <></>}
 
         <article
           className="post-content"
