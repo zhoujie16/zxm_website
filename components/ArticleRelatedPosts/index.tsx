@@ -29,8 +29,8 @@ const Index = (props) => {
         <i className="fas fa-thumbs-up fa-fw"></i> <span>相关推荐</span>
       </div>
       <div className="relatedPosts-list">
-        {related.map((item: any) => (
-          <div>
+        {related.map((item: any, i) => (
+          <div key={i}>
             <a
               href={`/article/${item.id}`}
               title={item.title}

@@ -24,7 +24,7 @@ const Index = (props: any) => {
       author = `${b[0].teacherName} | ${b[0].position}`;
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   return (
     <div className="post-copyright">
