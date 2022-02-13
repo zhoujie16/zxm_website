@@ -9,11 +9,13 @@ const Index = (props: any) => {
   }`;
   let title = "";
   let timeStr = "";
+  let sub_title = "";
   let content_rich = "";
   let herfUrl = ``;
   try {
     title = itemInfo?.title;
     timeStr = moment(Number(itemInfo.release_time)).format("YYYY-MM-DD");
+    sub_title = itemInfo.sub_title;
     content_rich = itemInfo.content_rich;
     herfUrl = `/article/${itemInfo.id}`;
   } catch (error) {
@@ -69,7 +71,7 @@ const Index = (props: any) => {
         </div>
         <div
           className="content"
-          dangerouslySetInnerHTML={{ __html: content_rich }}
+          dangerouslySetInnerHTML={{ __html: sub_title }}
         ></div>
       </div>
     </div>
