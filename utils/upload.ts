@@ -3,7 +3,9 @@ const path = require("path");
 const matter = require("gray-matter");
 const marked = require("marked");
 const axios = require("axios");
-const baseUrl = "http://127.0.0.1:7001";
+const moment = require("moment");
+const BASE_URL = "http://127.0.0.1:7001";
+const PASSWORD = "";
 
 // 递归找到文件夹内所有md文件  输出数组
 async function filteFileMdList(fileDirPath) {
@@ -85,8 +87,14 @@ async function saveMd() {
     let mdContent = await filteMdToHtml(mdPath);
     let { contentHtml } = mdContent;
     if (contentHtml) {
-      let { title, date, categories, password, column_id, state } =
-        mdContent.data;
+      let {
+        title,
+        date,
+        categories,
+        password,
+        column_id = 11,
+        state,
+      } = mdContent.data;
       // console.log({
       //   title,
       //   date,
@@ -95,16 +103,24 @@ async function saveMd() {
       if (password) {
         contentHtml = "这里有东西被加密了，暂时无法查看哦";
       }
-      let saveRes = await axios.post(`${baseUrl}/website/article/saveMyBlog`, {
+      let release_time = moment(date).toDate().getTime();
+      let saveData = {
+        _add: true,
+        _update: true,
+        wkey: "MY_BLOG",
+        wid: release_time,
         title,
-        date,
+        release_time,
         column_id,
-        categories,
-        contentHtml,
+        content_rich: contentHtml,
         state,
-      });
-      console.log(saveRes.data);
-      if (saveRes.data.stat && saveRes.data.stat.code == 0) {
+        password
+      };
+      let saveRes = await axios.post(
+        `${BASE_URL}/website/article/saveBlogByOther?pwd=${PASSWORD}`,
+        saveData
+      );
+      if (saveRes.data.stat.code == 0) {
         console.log("保存结果", saveRes.data, title);
       } else {
         console.log("保存失败");
@@ -116,5 +132,3 @@ async function saveMd() {
 }
 
 saveMd();
-
-// console.log(axios);
