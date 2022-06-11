@@ -30,11 +30,7 @@ instance.interceptors.request.use((config) => {
 
 // 响应拦截
 instance.interceptors.response.use((response) => {
-  let { config, headers, data } = response;
-  let { stat, content } = data;
-  if (stat.code == 0) {
-    data = data.content;
-  }
+  let { code, data } = response.data;
   return data;
 }, errorHandler);
 
