@@ -10,7 +10,7 @@
 
 - 网站前台：React + React-Redux + Next.js
 - 后台管理：Vue + ElementUI
-- 服务端：NodeJS + Koa2 + Midway + MongoDB
+- 服务端：NodeJS + Koa2 + Midway + MySQL
 
 ### 项目预览
 
