@@ -1,0 +1,127 @@
+// .recent-post-item{
+//   background-color: red;
+// }
+#page-header {
+  background-color: #666;
+}
+.pagination_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+// 技术专利 卡片 S
+.technical_group_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.categories_card {
+  cursor: pointer;
+  .categories_card_inner {
+    display: flex;
+    width: 330px;
+    background-color: #fff;
+    padding: 14px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    .categories_card_l {
+      flex: 0 0 94px;
+      .categories_card_icon {
+        width: 94px;
+        height: 123px;
+        background-color: #eee;
+        img {
+          width: 94px;
+          height: 123px;
+          object-fit: cover;
+        }
+      }
+    }
+    .categories_card_r {
+      flex: 1;
+      padding-left: 14px;
+      .categories_card_title {
+        font-size: 20px;
+        line-height: 28px;
+        color: var(--juejin-font-1);
+      }
+      .categories_card_desc {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--juejin-font-2);
+        margin-top: 4px;
+      }
+    }
+  }
+}
+// 技术专利 卡片 E
+
+// 首页 全屏部分 S
+#page-header.full_page {
+  height: 100vh;
+  background-size: cover;
+  .full_page_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .full_page_bg_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  #site-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30% !important;
+
+    #site-avatar {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 100px;
+      // outline: solid 1px #eee;
+    }
+    #site-title {
+      font-size: 30px;
+    }
+    #site-subtitle {
+      font-size: 22px;
+    }
+    .site-span-hr {
+      margin: 20px;
+      height: 1px;
+      width: 40%;
+      max-width: 280px;
+      background-color: #fff;
+      opacity: 0.5;
+    }
+  }
+}
+
+// 首页 全屏部分 E
+
+// ONE S
+.one-video-box {
+  display: none;
+}
+// ONE E

@@ -1,0 +1,16 @@
+{
+  "zxm_blog.about_page.pv": "关于页面访问量",
+  "zxm_blog.all_page.pv": "所有页面访问量",
+  "zxm_blog.home_page.pv": "首页访问量",
+  "zxm_blog.categories_page.pv": "分类页面访问量",
+  "zxm_blog.interview_page.pv": "面试进阶页面访问量",
+  "zxm_blog.juejin_page.pv": "掘金热门页面访问量",
+  "zxm_blog.one_page.pv": "阅读页面访问量",
+  "zxm_blog.post_page.pv": "文章页面访问总量",
+  "zxm_blog.search_page.pv": "搜索页面访问量",
+  "zxm_blog.technical_page.pv": "技术专栏访问量",
+  "zxm_blog.api.getBingPictures.pv": "getBingPictures 访问量",
+  "zxm_blog.api.getRandomImage.pv": "getRandomImage 访问量",
+  "zxm_blog.api.getSoulText.pv": "getBingPictures 访问量",
+  "zxm_blog._document.pv": "_document 渲染 访问量"
+}
